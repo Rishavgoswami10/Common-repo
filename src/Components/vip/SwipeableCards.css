@@ -9,7 +9,7 @@
   padding: 20px;
   margin-bottom: 20px;
   height: 190px;
-  position: relative; /* Ensure position relative for inner progress positioning */
+  position: relative; 
 }
 
 .card .top {
@@ -183,7 +183,7 @@
 
 .one-img {
   width: 80px;
-  height: 55px;
+  height: 50px;
 }
 
 .one-img img {

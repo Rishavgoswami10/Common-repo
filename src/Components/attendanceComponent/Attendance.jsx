@@ -70,11 +70,13 @@ useEffect(() => {
                                 width: '70%',
                                 height: '50px',
                                 borderRadius: `20px`,
-                                background: ` linear-gradient(180deg, #ffbd40 0%, #ff7f3d 100%)`,
-                                boxShadow: ` 0 0.1333rem #f24b16, 0 0.09667rem #ffec75 inset`,
+                                background: ` linear-gradient(to left,#c59542, #f9e29c)`,
                                 cursor: 'pointer',
                                 border: 'none',
-                                fontSize: '1em'
+                                fontSize: '1em',
+                                marginBottom: "120px",
+                                color: '#8f5205'
+
                             }}>
                             Attendance
                         </Button>

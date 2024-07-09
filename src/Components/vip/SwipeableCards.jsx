@@ -8,15 +8,14 @@ import badge4 from "../../assets/badge4.png";
 import badge5 from "../../assets/badge5.png";
 import lock from "../../assets/lock.png";
 import diamond from "../../assets/diamond.png";
-import gift from "../../assets/gift.png";
-import coin from "../../assets/coin.png";
+import DiamondIcon from "@mui/icons-material/Diamond";
+import coin1 from "../../assets/coin1.png";
 import safe from "../../assets/safe.png";
-import stack from "../../assets/stack.png";
 import wallet from "../../assets/wallet.png";
 import safeicon from "../../assets/safeicon.png";
-import stackicon from "../../assets/stackicon.png";
 import dicon from "../../assets/dicon.png";
-
+import stack2 from "../../assets/stack2.png";
+import gift1 from "../../assets/gift1.png";
 import bg1 from "../../assets/bg1.png";
 import bg2 from "../../assets/bg2.png";
 import bg3 from "../../assets/bg3.png";
@@ -25,6 +24,7 @@ import crownimg from "../../assets/crown.png";
 import crownimg2 from "../../assets/crown2.png";
 
 import "./SwipeableCards.css"; // Import your CSS file for styling
+import { Diamond } from "@mui/icons-material";
 
 const SwipeableCards = () => {
   const [index, setIndex] = useState(0);
@@ -116,7 +116,7 @@ const SwipeableCards = () => {
       marginTop: "20px",
     },
     associated: {
-      backgroundColor: "#2b3270",
+      backgroundColor: "#333332",
       padding: "20px",
       borderRadius: "10px",
     },
@@ -303,11 +303,7 @@ const SwipeableCards = () => {
                   }}
                 >
                   <div className="d-img">
-                    <img
-                      src={diamond}
-                      alt=""
-                      style={{ width: "100%", height: "100%" }}
-                    />
+                    <Diamond sx={{ color: "#d9ac4e", fontSize: 30}} />
                   </div>
                   <div
                     style={{
@@ -327,11 +323,12 @@ const SwipeableCards = () => {
                       gap: "5px",
                       width: "100%",
                       margin: "20px auto",
+                      textAlign: "left",
                     }}
                   >
                     <div className="one-img">
                       <img
-                        src={gift}
+                        src={gift1}
                         alt=""
                         style={{ width: " 100% ", height: "100%" }}
                       />
@@ -348,7 +345,7 @@ const SwipeableCards = () => {
                           display: "flex",
                           justifyContent: "space-evenly",
                           margin: "5px auto",
-                          border: "1px solid cyan",
+                          border: "1px solid #dd9138",
                           borderRadius: "10px",
                         }}
                       >
@@ -366,7 +363,7 @@ const SwipeableCards = () => {
                           display: "flex",
                           justifyContent: "space-evenly",
                           margin: "5px auto",
-                          border: "1px solid cyan",
+                          border: "1px solid #d9ac4e",
                           borderRadius: "10px",
                         }}
                       >
@@ -389,10 +386,11 @@ const SwipeableCards = () => {
                       gap: "5px",
                       width: "100%",
                       margin: "20px auto",
+                      textAlign: "left",
                     }}
                   >
                     <div className="one-img">
-                      <img src={coin} alt="" />
+                      <img src={coin1} alt="" />
                     </div>
                     <div>
                       <div style={{ color: "white" }}> Monthly reward</div>
@@ -406,7 +404,7 @@ const SwipeableCards = () => {
                           display: "flex",
                           justifyContent: "space-evenly",
                           margin: "5px auto",
-                          border: "1px solid cyan",
+                          border: "1px solid #dd9138",
                           borderRadius: "10px",
                         }}
                       >
@@ -424,7 +422,7 @@ const SwipeableCards = () => {
                           display: "flex",
                           justifyContent: "space-evenly",
                           margin: "5px auto",
-                          border: "1px solid cyan",
+                          border: "1px solid #d9ac4e",
                           borderRadius: "10px",
                         }}
                       >
@@ -447,52 +445,12 @@ const SwipeableCards = () => {
                       gap: "5px",
                       width: "100%",
                       margin: "20px auto",
-                    }}
-                  >
-                    <div className="one-img">
-                      <img src={safe} alt="" />
-                    </div>
-                    <div>
-                      <div style={{ color: "white" }}> Safe</div>
-                      <div style={{ color: "gray" }}>
-                        increase the extra income of the safe ...
-                      </div>
-                    </div>
-                    <div style={{ width: "80px" }}>
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-evenly",
-                          margin: "5px auto",
-                          border: "1px solid gray",
-                          alignContent: "center",
-                          borderRadius: "10px",
-                        }}
-                      >
-                        <div style={{ width: "20px", height: "20px" }}>
-                          <img
-                            src={safeicon}
-                            alt=""
-                            style={{ width: " 100% ", height: "100%" }}
-                          />
-                        </div>
-                        <div style={{ color: "white" }}>{card.safe}</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="list-one"
-                    style={{
-                      display: "flex",
-                      gap: "5px",
-                      width: "100%",
-                      margin: "20px auto",
                       justifyContent: "space-between",
+                      textAlign: "left",
                     }}
                   >
                     <div className="one-img">
-                      <img src={stack} alt="" />
+                      <img src={stack2} alt="" />
                     </div>
                     <div>
                       <div style={{ color: "white" }}> Rebate Rate</div>
@@ -506,14 +464,14 @@ const SwipeableCards = () => {
                           display: "flex",
                           justifyContent: "space-evenly",
                           margin: "5px auto",
-                          border: "1px solid gray",
+                          border: "1px solid #d9ac4e",
                           alignContent: "center",
                           borderRadius: "10px",
                         }}
                       >
                         <div style={{ width: "20px", height: "20px" }}>
                           <img
-                            src={stackicon}
+                            src={stack2}
                             alt=""
                             style={{ width: " 100% ", height: "100%" }}
                           />

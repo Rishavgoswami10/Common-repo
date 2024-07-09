@@ -47,7 +47,7 @@ const ActivityMain= ({ children }) => {
           height="calc(var(--vh, 1vh) * 100)"
           position="relative"
         >
-          <Box flexGrow={1} sx={{backgroundColor: 'rgb(34,39,91)'}}>
+          <Box flexGrow={1} sx={{backgroundColor: 'rgb(36,36,36)'}}>
 
 
             <Grid
@@ -58,7 +58,7 @@ const ActivityMain= ({ children }) => {
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: 'Rgb(55,72,146)',
+                backgroundColor: 'rgb(51,51,50)',
                 padding: '8px 16px',
                 color: 'white'
                 
@@ -89,7 +89,7 @@ const ActivityMain= ({ children }) => {
             image="assets/images/signInBanner-33f86d3f.png"
             alt="Image 1"
           />
-          <CardContent sx={{backgroundColor:"rgb(50,58,124)"}}>
+          <CardContent sx={{backgroundColor:"rgb(51,51,50)"}}>
             <Typography variant="caption" component="div" sx={{color:"white",fontWeight:"bold"}}  >
               Gifts
             </Typography>
@@ -107,7 +107,7 @@ const ActivityMain= ({ children }) => {
             image="assets/images/giftRedeem-45917887.png"
             alt="Image 2"
           />
-          <CardContent sx={{backgroundColor:"rgb(50,58,124)"}}>
+          <CardContent sx={{backgroundColor:"rgb(51,51,50)"}}>
             <Typography variant="caption" component="div" sx={{color:"white",fontWeight:"bold"}} >
             Attendance bonus
             </Typography>
@@ -128,10 +128,10 @@ const ActivityMain= ({ children }) => {
           <CardMedia
             component="img"
             height="140"
-            image="assets/images/activity.jpg"
+            image="assets/images/Banner9.png"
             alt="Image 1"
           />
-          <CardContent sx={{backgroundColor:"rgb(50,58,124)"}}>
+          <CardContent sx={{backgroundColor:"rgb(51,51,50)"}}>
             <Typography variant="caption" component="div" sx={{color:"white",fontWeight:"bold"}} >
             TC GAMES AVIATOR BONUS BONANZA
             </Typography>
@@ -144,10 +144,10 @@ const ActivityMain= ({ children }) => {
           <CardMedia
             component="img"
             height="140"
-            image="assets/images/activity2.jpg"
+            image="assets/images/Banner10.png"
             alt="Image 2"
           />
-          <CardContent sx={{backgroundColor:"rgb(50,58,124)"}}>
+          <CardContent sx={{backgroundColor:"rgb(51,51,50)"}}>
             <Typography variant="caption" component="div" sx={{fontWeight:"bold",color:"white"}} >
             GET 2% EVERYDAY
             </Typography>
@@ -160,10 +160,10 @@ const ActivityMain= ({ children }) => {
           <CardMedia
             component="img"
             height="140"
-            image="assets/images/activity3.jpg"
+            image="assets/images/Banner11.png"
             alt="Image 3"
           />
-          <CardContent sx={{backgroundColor:"rgb(50,58,124)"}}>
+          <CardContent sx={{backgroundColor:"rgb(51,51,50)"}}>
             <Typography variant="caption" component="div" sx={{color:"white",fontWeight:"bold"}} >
             WINSTREAK KRISHNA RANK
             </Typography>

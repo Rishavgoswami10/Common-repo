@@ -48,7 +48,7 @@ const VipMain= ({ children }) => {
           height="calc(var(--vh, 1vh) * 100)"
           position="relative"
         >
-          <Box flexGrow={1} sx={{backgroundColor: 'rgb(34,39,91)'}}>
+          <Box flexGrow={1} sx={{backgroundColor: '#242424'}}>
 
 
             <Grid
@@ -59,7 +59,7 @@ const VipMain= ({ children }) => {
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: 'Rgb(55,72,146)',
+                backgroundColor: '#3f3f3f',
                 padding: '8px 16px',
                 color: 'white'
                 

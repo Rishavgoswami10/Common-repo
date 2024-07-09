@@ -159,7 +159,7 @@ const WalletMain = ({ children }) => {
                 position: "sticky",
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: "rgb(42,50,112)",
+                backgroundColor: "rgb(63,63,63)",
                 padding: "8px 16px",
                 color: "white",
               }}
@@ -183,7 +183,7 @@ const WalletMain = ({ children }) => {
             <Grid
               container
               spacing={2}
-              sx={{ backgroundColor: "rgb(42,50,112)", height: "230px" }}
+              sx={{ backgroundColor: "rgb(51,51,50)", height: "230px" }}
             >
               <Grid item xs={12}>
                 <img
@@ -228,7 +228,7 @@ const WalletMain = ({ children }) => {
                 marginLeft: "auto",
                 marginRight: "auto",
                 maxWidth: "95%",
-                backgroundColor: "rgb(42,50,112)",
+                backgroundColor: "rgb(51,51,50)",
                 borderRadius: "20px",
               }}
             >
@@ -245,7 +245,7 @@ const WalletMain = ({ children }) => {
                     variant="determinate"
                     value={100}
                     size={80}
-                    sx={{ color: "rgb(55,72,146)", position: "absolute" }}
+                    sx={{ color: "rgb(77,77,76)", position: "absolute" }}
                   />
                   <Box
                     top={0}
@@ -319,15 +319,16 @@ const WalletMain = ({ children }) => {
               <Button
               variant="contained"
               sx={{
-                backgroundColor: "rgb(40,164,242)",
+                background: "linear-gradient(to right,#f9e39e, #c49440)",
                 borderRadius: "20px",
                 width: "80%",
+                fontWeight: "bold"
               }}
               fullWidth
               onClick={handleTransfer}
             >
-              Transfer to Main Wallet
-            </Button>
+                  Main wallet transfer
+                  </Button>
                 {/* <Button
                   variant="contained"
                   sx={{
@@ -394,7 +395,7 @@ const WalletMain = ({ children }) => {
                 {data.map((item, index) => (
                   <Grid item xs={4} key={index}>
                     <Box
-                      sx={{ bgcolor: "rgb(42,50,112)", p: 1, borderRadius: 1 }}
+                      sx={{ bgcolor: "rgb(51,51,50)", p: 1, borderRadius: 1 }}
                     >
                       <Typography variant="body1" sx={{ color: "white" }}>
                         {item.label}

@@ -76,7 +76,7 @@ function VipMain() {
       <div className="bottom-box">
         <div className="exp-box">
           <div className="exp">
-            <div style={{ color: 'cyan', marginBottom: '5px' }}>{userData.totalBets} My Total Bets</div>
+            <div style={{ color: '#d9ac4e', marginBottom: '5px' }}>{userData.totalBets} My Total Bets</div>
           </div>
           <div className="exp">
             

@@ -1,6 +1,6 @@
 import React from 'react'
 import './CoinBox.css'
-import coinimg from '../../assets/coin.png'
+import coinimg from '../../assets/coin1.png'
 import axios from 'axios';
 import {domain} from '../config'
 
