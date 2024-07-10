@@ -81,9 +81,9 @@ const RowVisualization = ({ data }) => {
                     )}
                 </div>
             ))}
-            <Button variant="contained" color="primary" onClick={handleLoadMore}>
-                Load More
-            </Button>
+           <Button variant="contained" sx={{backgroundColor:"#D9AC4F",color:"#8F520C"}} onClick={handleLoadMore}>
+          Load More
+        </Button>
         </div>
     );
 };
