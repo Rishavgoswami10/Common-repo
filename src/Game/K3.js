@@ -130,7 +130,7 @@ const CustomPagination = styled(Pagination)({
     color: '#A8A5A1',
   },
   '& .MuiPaginationItem-page.Mui-selected': {
- 
+  
     color: '#A8A5A1',
   },
   '& .MuiPaginationItem-ellipsis': {
@@ -1740,7 +1740,7 @@ sx={{
                     backgroundColor: "#4D4D4C",
                     color: "#D9AC4F",
                     marginTop: "8px",
-                   
+                    
                     textAlign: "center",
                     lineHeight: "20px",
                     margin: "0 2px",
@@ -2227,7 +2227,7 @@ sx={{
                     <AccordionSummary
                       aria-controls="panel1a-content"
                       id="panel1a-header"
-                     
+                      
                     >
                       <Grid
                         container

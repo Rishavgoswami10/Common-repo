@@ -8,6 +8,7 @@ import AccountIcon from '@mui/icons-material/AccountCircle';
 import RedeemIcon from '@mui/icons-material/Redeem';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import DiamondIcon from '@mui/icons-material/Diamond';
 
 const BottomNavigationArea = () => {
   const location = useLocation();
@@ -34,55 +35,110 @@ const BottomNavigationArea = () => {
       style={{
         position: 'fixed',
         bottom: 0,
-        backgroundImage: 'url(/assets/images/tabBarBg-301df93c.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        padding: '10px 0',
-        backgroundColor: 'transparent',
+        padding: '6px 0',
+        backgroundColor: '#333332',
         marginLeft: '-5px',
-        width: '100%', // make BottomNavigation responsive
-        maxWidth: matches ? '400px' : 'none', // limit maximum width for larger devices
+        borderRadius:"20px",
+        width: '99%', // make BottomNavigation responsive
+        maxWidth: matches ? '396px' : 'none', // limit maximum width for larger devices
         margin: 'auto', // center BottomNavigation
       }}
     >
       <BottomNavigationAction
-        style={{ color: value === '/' ? 'rgb(72,196,240)' : 'white' }}
+        style={{ color: value === '/home' ? '#DDB96B' : '#BFBFBF' }}
         label="Home"
         value="/home"
-        icon={<HomeIcon style={{ color: value === '/' ? 'rgb(72,196,240)' : 'white' }} />}
+        icon={ <img 
+          src={value === '/home' ? '/assets/images/home-r-0e9d3a12.png':'/assets/images/home-3e6a9291.png'} 
+          width="30px" 
+          height="30px" 
+          style={{ 
+            color: value === '/home' ? '#DDB96B' : '#BFBFBF' // hide image when src is empty
+          }} 
+          alt="icon"
+        />} 
       />
+  <BottomNavigationAction
+  style={{ color: value === '/activity' ? '#DDB96B' : '#BFBFBF' }}
+  label="Activity"
+  value="/activity"
+  icon={
+    <img 
+    src={value === '/activity' ? '/assets/images/activity-r-8eb2eaaa.png':'/assets/images/activity-bb37b07c.png'} 
+    width="30px" 
+    height="30px" 
+    style={{ 
+      color: value === '/activity' ? '#DDB96B' : '#BFBFBF' // hide image when src is empty
+    }} 
+    alt="icon"
+  />
+    
+  }
+/>
+
+
+  <BottomNavigationAction
+   
+  label="Promotion"
+  value="/promotion"
+  icon={
+    value === '/promotion' ? 
+    <DiamondIcon style={{ 
+      width: '35px', 
+      height: '33px', 
+      color:"#DDB96B",
+      backgroundColor:"#333332",
+      borderRadius:"50%",
+      padding: '2px' 
+    }} /> : 
+    <DiamondIcon style={{ 
+      width: '35px', 
+      height: '33px', 
+      color:"#DDB96B", 
+      backgroundColor:"#333332",
+      borderRadius:"50%",
+      padding: '2px' 
+    }} />
+  }
+  style={{
+    color: value === '/promotion' ? '#DDB96B' : '#DDB96B',
+    transform: 'scale(1.3)',
+    marginTop: '-25px',
+  }}
+/>
+
       <BottomNavigationAction
-        style={{ color: value === '/activity' ? 'rgb(72,196,240)' : 'white' }}
-        label="Activity"
-        value="/activity"
-        icon={<RedeemIcon style={{ color: value === '/activity' ? 'rgb(72,196,240)' : 'white' }} />}
-      />
-     <BottomNavigationAction
-      label="Promotion"
-      value="/promotion"
-      icon={
-        value === '/promotion' ? 
-        <img src="assets/images/abc.png" alt="Promotion" style={{ width: '45px', maxWidth: '100%' }} /> : // make image responsive
-        <img src="assets/images/abc.png" alt="Promotion" style={{ width: '45px', maxWidth: '100%' }} /> // make image responsive
-      }
-      style={{
-        color: value === '/promotion' ? 'rgb(72,196,240)' : 'white',
-        transform: 'scale(1.3)',
-        marginTop: '-25px',
-      }}
-    />
-      <BottomNavigationAction
-        style={{ color: value === '/wallet' ? 'rgb(72,196,240)' : 'white' }}
+        style={{ color: value === '/wallet' ? '#DDB96B' : '#BFBFBF' }}
         label="Wallet"
         value="/wallet"
-        icon={<WalletIcon style={{ color: value === '/wallet' ? 'rgb(72,196,240)' : 'white' }} />}
+        icon ={
+        <img 
+        src={value === '/wallet' ? '/assets/images/wallet-r-5ca037e5.png':'/assets/images/wallet-dd37d20a.png'} 
+        width="30px" 
+        height="30px" 
+        style={{ 
+          color: value === '/wallet' ? '#DDB96B' : '#BFBFBF' // hide image when src is empty
+        }} 
+        alt="icon"
+      />}
       />
       <BottomNavigationAction
-        style={{ color: value === '/account' ? 'rgb(72,196,240)' : 'white' }}
-        label="Account"
-        value="/account"
-        icon={<AccountIcon style={{ color: value === '/account' ? 'rgb(72,196,240)' : 'white' }} />}
-      />
+  style={{ color: value === '/account' ? '#DDB96B' : '#BFBFBF' }}
+  label="Account"
+  value="/account"
+  icon={
+    <img 
+    src={value === '/account' ? '/assets/images/main-r-d2aeb055.png':'/assets/images/main-53f64122.png'} 
+    width="30px" 
+    height="30px" 
+    style={{ 
+      color: value === '/account' ? '#DDB96B' : '#BFBFBF' // hide image when src is empty
+    }} 
+    alt="icon"
+  />
+  }
+/>
+
     </BottomNavigation>
   );
 };

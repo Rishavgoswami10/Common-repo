@@ -213,12 +213,12 @@ const InvitationRulesMain = ({ children }) => {
 <TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows.map((row) => (
     <TableRow key={row.stars}>
-      <TableCell style={{ border: '1px solid #3A3947' }} component="th" scope="row" sx={{ color: 'orange' }}>
+      <TableCell style={{ border: '1px solid #3A3947' }} component="th" scope="row" sx={{ color:"#D9AC45" }}>
         {row.stars}
       </TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.coins}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.goldCoins}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.teamRanking}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.coins}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.goldCoins}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.teamRanking}</TableCell>
     </TableRow>
   ))}
 </TableBody>
@@ -257,13 +257,13 @@ const InvitationRulesMain = ({ children }) => {
 <TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows2.map((rows2) => (
     <TableRow key={rows2.stars}>
-      <TableCell style={{ border: '1px solid #3A3947',color:"orange" }} component="th" scope="row">
+      <TableCell style={{ border: '1px solid #3A3947',color:"#D9AC45" }} component="th" scope="row">
         {rows2.stars}
       </TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{rows2.tier1}</TableCell>
-      <TableCell style={{ border: '1px solid#3A3947' }} align="right">{rows2.tier2}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{rows2.tier3}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{rows2.tier4}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{rows2.tier1}</TableCell>
+      <TableCell style={{ border: '1px solid#3A3947',color:"#A8A5A1" }} align="right">{rows2.tier2}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{rows2.tier3}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{rows2.tier4}</TableCell>
     </TableRow>
   ))}
 </TableBody>
@@ -287,13 +287,13 @@ const InvitationRulesMain = ({ children }) => {
 <TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows3.map((row) => (
     <TableRow key={row.stars}>
-      <TableCell style={{ border: '1px solid #3A3947',color:"orange" }} component="th" scope="row">
+      <TableCell style={{ border: '1px solid #3A3947',color:"#D9AC45" }} component="th" scope="row">
         {row.stars}
       </TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier1}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier2}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier3}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier4}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier1}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier2}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier3}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier4}</TableCell>
     </TableRow>
   ))}
 </TableBody>
@@ -317,13 +317,13 @@ const InvitationRulesMain = ({ children }) => {
 <TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows4.map((row) => (
     <TableRow key={row.stars}>
-      <TableCell style={{ border: '1px solid #3A3947',color:"orange" }} component="th" scope="row">
+      <TableCell style={{ border: '1px solid #3A3947',color:"#D9AC45" }} component="th" scope="row">
         {row.stars}
       </TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier1}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier2}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier3}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier4}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier1}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier2}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier3}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier4}</TableCell>
     </TableRow>
   ))}
 </TableBody>
@@ -347,13 +347,13 @@ const InvitationRulesMain = ({ children }) => {
 <TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows5.map((row) => (
     <TableRow key={row.stars}>
-      <TableCell style={{ border: '1px solid #3A3947',color:"orange" }} component="th" scope="row">
+      <TableCell style={{ border: '1px solid #3A3947',color:"#D9AC45" }} component="th" scope="row">
         {row.stars}
       </TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier1}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier2}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier3}</TableCell>
-      <TableCell style={{ border: '1px solid #3A3947' }} align="right">{row.tier4}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier1}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier2}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947',color:"#A8A5A1" }} align="right">{row.tier3}</TableCell>
+      <TableCell style={{ border: '1px solid #3A3947' ,color:"#A8A5A1"}} align="right">{row.tier4}</TableCell>
     </TableRow>
   ))}
 </TableBody>

@@ -33,12 +33,12 @@ const depositOptions = [
 ];
 
 const options = [
-  { label: 'Copy invitation code', image: 'assets/images/copy.png' },
-  { label: 'Subordinate data', image: 'assets/images/sub.png' },
-  { label: 'Commission details', image: 'assets/images/com.png' },
-  { label: 'Invitation rules', image: 'assets/images/invi.png' },
-  { label: 'New Subordinates', image: 'assets/images/subordinate-1cba3c06.png' },
-  { label: 'Agent line customer service', image: 'assets/images/agent.png' },
+  { label: 'Copy invitation code', image: 'assets/images/download (12).png' },
+  { label: 'Subordinate data', image: 'assets/images/team_port-b79e3d75.png' },
+  { label: 'Commission details', image: 'assets/images/commission-4abb55b3.png' },
+  { label: 'Invitation rules', image: 'assets/images/download (13).png' },
+  { label: 'New Subordinates', image: 'assets/images/subordinate-d83ad4d6.png' },
+  { label: 'Agent line customer service', image: 'assets/images/server-a789bbfb.png' },
 ];
 
 const PromotionMain = ({ children }) => {
