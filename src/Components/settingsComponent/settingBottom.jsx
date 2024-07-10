@@ -14,7 +14,7 @@ function SettingBottomBox(props) {
 
 <div className="bottom-goto" onClick={props.onClick}>
   <span>{props.bottomGoto}</span>
-  <KeyboardArrowRightIcon />
+  <KeyboardArrowRightIcon sx={{color: "rgb(136,136,136)"}} />
 </div>
         </div>
     )

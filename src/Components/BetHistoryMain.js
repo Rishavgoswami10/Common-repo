@@ -74,7 +74,7 @@ const BetHistoryMain = ({ children }) => {
                 position: "sticky",
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: "rgb(42,50,112)",
+                backgroundColor: "rgb(63,63,63)",
                 padding: "8px 16px",
                 color: "white",
               }}
@@ -112,11 +112,13 @@ const BetHistoryMain = ({ children }) => {
             padding: '10px'
           }}
         >
-          <option value="all">All</option>
-          <option value="game1">Wingo</option>
-          <option value="game2">K3</option>
-          <option value="game2">TRX</option>
-          <option value="game2">5d</option>
+          <option value="all" style={{ color: 'black' }}>All</option>
+<option value="game1" style={{ color: 'black' }}>Wingo</option>
+<option value="game2" style={{ color: 'black' }}>K3</option>
+<option value="game2" style={{ color: 'black' }}>TRX</option>
+<option value="game2" style={{ color: 'black' }}>5d</option>
+
+
         </select>
       </div>
     </Box>

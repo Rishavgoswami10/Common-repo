@@ -134,46 +134,83 @@ function MainPage() {
                             </Button>
                         </div>
                         <Dialog
-      open={openResetPassword}
-      onClose={handleCloseResetPassword}
-      PaperProps={{
-        component: 'form',
-        onSubmit: handleResetPassword,
-      }}
-    >
-      <DialogTitle>Reset Password</DialogTitle>
-      <DialogContent>
-        <DialogContentText>
-          Enter your old password and new password.
-        </DialogContentText>
-        <TextField
-          autoFocus
-          required
-          margin="dense"
-          id="oldPassword"
-          name="oldPassword"
-          label="Old Password"
-          type="password"
-          fullWidth
-          value={oldPassword}
-          onChange={(e) => setOldPassword(e.target.value)}
-        />
-        <TextField
-          required
-          margin="dense"
-          id="newPassword"
-          name="newPassword"
-          label="New Password"
-          type="password"
-          fullWidth
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
-        />
-      </DialogContent>
-      <DialogActions> <Button onClick={handleCloseResetPassword}>Cancel</Button>
-        <Button type="submit">Change Password</Button>
-      </DialogActions>
-    </Dialog>
+  open={openResetPassword}
+  onClose={handleCloseResetPassword}
+  PaperProps={{
+    component: 'form',
+    onSubmit: handleResetPassword,
+    sx: {
+      backgroundColor: 'rgb(36,36,36)',
+      color: 'rgb(245,243,240)',
+    },
+  }}
+>
+  <DialogTitle sx={{ color: 'rgb(245,243,240)' }}>Reset Password</DialogTitle>
+  <DialogContent>
+    <DialogContentText sx={{ color: 'rgb(245,243,240)' }}>
+      Enter your old password and new password.
+    </DialogContentText>
+    <TextField
+  autoFocus
+  required
+  margin="dense"
+  id="oldPassword"
+  name="oldPassword"
+  label="Old Password"
+  type="password"
+  fullWidth
+  value={oldPassword}
+  onChange={(e) => setOldPassword(e.target.value)}
+  sx={{
+    '& .MuiInputBase-input': { color: 'rgb(245,243,240)' },
+    '& .MuiInputLabel-root': { color: 'rgb(245,243,240)' },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'goldenrod', // Default outline color
+      },
+      '&:hover fieldset': {
+        borderColor: 'goldenrod', // Outline color on hover
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'goldenrod', // Outline color when focused
+      },
+    },
+  }}
+/>
+<TextField
+  required
+  margin="dense"
+  id="newPassword"
+  name="newPassword"
+  label="New Password"
+  type="password"
+  fullWidth
+  value={newPassword}
+  onChange={(e) => setNewPassword(e.target.value)}
+  sx={{
+    '& .MuiInputBase-input': { color: 'rgb(245,243,240)' },
+    '& .MuiInputLabel-root': { color: 'rgb(245,243,240)' },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'goldenrod', // Default outline color
+      },
+      '&:hover fieldset': {
+        borderColor: 'goldenrod', // Outline color on hover
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'goldenrod', // Outline color when focused
+      },
+    },
+  }}
+/>
+
+  </DialogContent>
+  <DialogActions>
+    <Button onClick={handleCloseResetPassword} sx={{ color: 'rgb(245,243,240)' }}>Cancel</Button>
+    <Button type="submit" sx={{ color: 'rgb(245,243,240)' }}>Change Password</Button>
+  </DialogActions>
+</Dialog>
+
 
     <Dialog
       open={alertOpen}
@@ -188,48 +225,69 @@ function MainPage() {
                         <h3>UID</h3>
                         <div className='uid'>
                         <span>{userData ? userData.uid : 'Loading...'}</span>
-                            <ContentCopyIcon sx={{ color: 'orange' }} />
+                            <ContentCopyIcon sx={{ color: 'white' }} />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="bottom-page">
-            <div className="bottom-heading" style={{ textAlign: 'left' }}>
+            <div className="bottom-heading" style={{ textAlign: 'left', color: "white" }}>
   <h3>Security Information</h3>
 </div>
 
 
 <Dialog
-          open={openChangeUsername}
-          onClose={handleCloseChangeUsername}
-          PaperProps={{
-            component: 'form',
-            onSubmit: handleChangeUsername,
-          }}
-        >
-          <DialogTitle>Change Username</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              Enter your new username.
-            </DialogContentText>
-            <TextField
-              autoFocus
-              required
-              margin="dense"
-              id="username"
-              name="username"
-              label="New Username"
-              type="text"
-              fullWidth
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleCloseChangeUsername}>Cancel</Button>
-            <Button type="submit">Change Username</Button>
-          </DialogActions>
-        </Dialog>
+  open={openChangeUsername}
+  onClose={handleCloseChangeUsername}
+  PaperProps={{
+    component: 'form',
+    onSubmit: handleChangeUsername,
+    sx: {
+      backgroundColor: 'rgb(36,36,36)',
+      color: '#ffffff',
+    },
+  }}
+>
+  <DialogTitle sx={{ color: '#ffffff' }}>Change Username</DialogTitle>
+  <DialogContent>
+    <DialogContentText sx={{ color: '#ffffff' }}>
+      Enter your new username.
+    </DialogContentText>
+    <TextField
+  autoFocus
+  required
+  margin="dense"
+  id="username"
+  name="username"
+  label="New Username"
+  type="text"
+  fullWidth
+  value={username}
+  onChange={(e) => setUsername(e.target.value)}
+  sx={{
+    '& .MuiInputBase-input': { color: 'rgb(102,100,98)' },
+    '& .MuiInputLabel-root': { color: 'rgb(102,100,98)' },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'goldenrod', // Default outline color
+      },
+      '&:hover fieldset': {
+        borderColor: 'goldenrod', // Outline color on hover
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'goldenrod', // Outline color when focused
+      },
+    },
+  }}
+/>
+
+  </DialogContent>
+  <DialogActions>
+    <Button onClick={handleCloseChangeUsername} sx={{ color: '#ffffff' }}>Cancel</Button>
+    <Button type="submit" sx={{ color: '#ffffff' }}>Change Username</Button>
+  </DialogActions>
+</Dialog>
+
                 <div className="bottom-box-container">
                 <SettingBottomBox
           settingBottomImage={lockimg}
@@ -238,10 +296,11 @@ function MainPage() {
           onClick={handleOpenResetPassword}
         />
 
-                    <SettingBottomBox
-                        settingBottomImage={mailBox}
-                        bottomBoxName='Bind Mailbox'
-                        bottomGoto='Edit' />
+<SettingBottomBox
+  settingBottomImage={mailBox}
+  bottomBoxName="Bind Mailbox"
+  bottomGoto="Edit"
+/>
 
                     <SettingBottomBox
                         settingBottomImage={googleVerification}

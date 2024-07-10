@@ -54,7 +54,7 @@ const LanguageMain= ({ children }) => {
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: 'RGB(54,142,255)',
+                backgroundColor: 'rgb(63,63,63)',
                 padding: '8px 16px',
                 color: 'white'
                 
@@ -75,9 +75,34 @@ const LanguageMain= ({ children }) => {
 
             {/* //content */}
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-  <Typography variant="h6">{t('language')}</Typography>
-  <Button variant="outlined" onClick={() => changeLanguage('en')}>English</Button>
-  <Button variant="outlined" onClick={() => changeLanguage('hi')}>हिंदी</Button>
+  <Typography variant="h6" sx={{color: "white"}}>{t('language')}</Typography>
+  <Button
+  variant="outlined"
+  onClick={() => changeLanguage('en')}
+  sx={{
+    color: 'goldenrod',
+    borderColor: 'goldenrod',
+    '&:hover': {
+      borderColor: 'goldenrod',
+    },
+  }}
+>
+  English
+</Button>
+
+<Button
+  variant="outlined"
+  onClick={() => changeLanguage('hi')}
+  sx={{
+    color: 'goldenrod',
+    borderColor: 'goldenrod',
+    '&:hover': {
+      borderColor: 'goldenrod',
+    },
+  }}
+>
+  हिंदी
+</Button>
 </Box>
             
             {/* content end */}
