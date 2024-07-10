@@ -238,7 +238,7 @@ const PromotionMain = ({ children }) => {
                 position: "sticky",
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: "rgb(42,50,112)",
+                backgroundColor: "rgb(51,51,50)",
                 padding: "8px 16px",
                 color: "white",
               }}
@@ -275,13 +275,13 @@ const PromotionMain = ({ children }) => {
                   <img
                     src="assets/images/download (16).png"
                     alt="Your Image"
-                    style={{ maxWidth: "20%" }}
+                    style={{ maxWidth: "30%" }}
                   />
                 </Grid>
                 <Grid item xs={9}>
                   <Typography
-                    variant="body1"
-                    sx={{ color: "white" }}
+                    fontSize="20px"
+                    sx={{ color: "#8f5205" }}
                     align="left"
                   >
                     Balance
@@ -291,8 +291,8 @@ const PromotionMain = ({ children }) => {
               <Grid container item alignItems="center">
                 <Grid item xs={4}>
                   <Typography
-                    variant="body1"
-                    sx={{ color: "white" }}
+                    fontSize="20px"
+                    sx={{ color: "#8f5205" }}
                     align="center"
                   >
                     {`\u20B9${user ? user.walletAmount : "Loading..."}`}
@@ -300,7 +300,7 @@ const PromotionMain = ({ children }) => {
                 </Grid>
                 <Grid item xs={8} style={{ textAlign: "left" }}>
                   <IconButton>
-                    <RefreshIcon style={{ color: "white" }} />
+                    <RefreshIcon style={{ color: "#8f5205" }} />
                   </IconButton>
                 </Grid>
               </Grid>
@@ -314,7 +314,7 @@ const PromotionMain = ({ children }) => {
                 <Grid item xs={9}>
                   <Typography
                     variant="body1"
-                    sx={{ color: "white" }}
+                    sx={{ color: "#9e9c9b" }}
                     align="right"
                   ></Typography>
                 </Grid>
@@ -335,7 +335,7 @@ const PromotionMain = ({ children }) => {
                 <Grid item xs={4} key={mode}>
                   <div
                     style={{
-                      backgroundColor:
+                      background:
                         paymentMode === mode
                           ? "rgb(205,160,79)"
                           : "rgb(77,77,76)",
@@ -485,37 +485,36 @@ const PromotionMain = ({ children }) => {
                 p: 2,
                 backgroundColor: "rgb(77,77,76)",
                 borderRadius: "4px",
-                color: "#FFFFFF",
               }}
               mt={2}
             >
-              <Typography variant="h6" gutterBottom>
+              <Typography variant="h6" gutterBottom sx={{color: "#ffffff"}}>
                 Recharge Instructions
               </Typography>
               <List>
                 <ListItem>
                   <ListItemIcon>
-                    <CheckCircleIcon sx={{ color: "#FFFFFF" }} />
+                    <CheckCircleIcon sx={{ color: "rgb(167,164,156)" }} />
                   </ListItemIcon>
-                  <ListItemText primary="If the transfer time is up, please fill out the deposit form again." />
+                  <ListItemText sx={{color: "#a7a49c"}} primary="If the transfer time is up, please fill out the deposit form again." />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <CheckCircleIcon sx={{ color: "#FFFFFF" }} />
+                    <CheckCircleIcon sx={{ color: "#a7a49c" }} />
                   </ListItemIcon>
-                  <ListItemText primary="The transfer amount must match the order you created, otherwise the money cannot be credited successfully." />
+                  <ListItemText sx={{color: "#a7a49c"}} primary="The transfer amount must match the order you created, otherwise the money cannot be credited successfully." />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <ErrorIcon sx={{ color: "#FFFFFF" }} />
+                    <ErrorIcon sx={{ color: "#a7a49c" }} />
                   </ListItemIcon>
-                  <ListItemText primary="If you transfer the wrong amount, our company will not be responsible for the lost amount!" />
+                  <ListItemText sx={{color: "#a7a49c"}} primary="If you transfer the wrong amount, our company will not be responsible for the lost amount!" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <ErrorIcon sx={{ color: "#FFFFFF" }} />
+                    <ErrorIcon sx={{ color: "#a7a49c" }} />
                   </ListItemIcon>
-                  <ListItemText primary="Note: do not cancel the deposit order after the money has been transferred." />
+                  <ListItemText sx={{color: "#a7a49c"}} primary="Note: do not cancel the deposit order after the money has been transferred." />
                 </ListItem>
               </List>
             </Box>

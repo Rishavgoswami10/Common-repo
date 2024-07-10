@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       margin: '0 10px',
       // backgroundColor: 'rgb(42,50,112)',
-      color: 'white',
+      color: '#a7a5a1',
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     '& .MuiOutlinedInput-input': {
-      color: 'white'
+      color: '#a7a5a1'
     },
     borderRadius: '10px',
    
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     width: '40ch',
   },
   list: {
-    color: "white",
+    color: "#a7a5a1",
   },
 }));
 
@@ -278,9 +278,9 @@ useEffect(() => {
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: 'rgb(42,50,112)',
+                backgroundColor: 'rgb(63,63,63)',
                 padding: '8px 16px',
-                color: 'white'
+                color: '#a7a5a1'
               }}
             >
               <Grid item xs={6} textAlign="left">
@@ -302,7 +302,6 @@ useEffect(() => {
       container
       mt={2}
       style={{
-        backgroundImage: `url('assets/images/TotalAssetsBg-a7cff097.png')`,
         borderRadius: 8,
         padding: 16,
         backgroundSize: 'cover',
@@ -314,19 +313,19 @@ useEffect(() => {
     >
       <Grid container item alignItems="center">
         <Grid item xs={3}  align="center">
-          <img src="assets/images/download (16).png" alt="Your Image" style={{ maxWidth: '20%' }} />
+          <img src="assets/images/download (16).png" alt="Your Image" style={{ maxWidth: '30%' }} />
         </Grid>
         <Grid item xs={9}>
-          <Typography variant="body1" sx={{color:"white"}} align="left">Avilable Balance</Typography>
+          <Typography fontSize="20px" sx={{color:"#8f5205"}} align="left">Avilable Balance</Typography>
         </Grid>
       </Grid>
       <Grid container item alignItems="center">
         <Grid item xs={4}>
-          <Typography variant="body1"  sx={{color:"white"}} align="center"> ₹{user ? user.walletAmount : "Loading.."}</Typography>
+          <Typography fontSize="30px"  sx={{color:"#8f5205"}} align="center"> ₹{user ? user.walletAmount : "Loading.."}</Typography>
         </Grid>
         <Grid item xs={8} style={{ textAlign: 'left' }}>
           <IconButton>
-            <RefreshIcon style={{color:"white"}} />
+            <RefreshIcon  style={{color:"#8f5205", fontSize: "100%" }} />
           </IconButton>
         </Grid>
       </Grid>
@@ -334,7 +333,7 @@ useEffect(() => {
         <Grid item xs={3}>
         </Grid>
         <Grid item xs={9}>
-          <Typography variant="body1"  sx={{color:"white"}} align="right"></Typography>
+          <Typography variant="body1"  sx={{color:"#a7a5a1"}} align="right"></Typography>
         </Grid>
       </Grid>
     </Grid>
@@ -348,15 +347,15 @@ useEffect(() => {
       <Grid item xs={4}>
         <div 
          onClick={() => setWithdrawalMethod('Bank Card')}
-         style={{ backgroundColor:withdrawalMethod === 'Bank Card' ? 'rgb(40,160,242)' : 'rgb(55,72,146)', borderRadius: 8, padding: 16 ,boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
+         style={{ background:withdrawalMethod === 'Bank Card' ? 'linear-gradient(to right,#f9e39e, #c49440)' : 'rgb(51,51,50)', borderRadius: 8, padding: 16 ,boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
           <img src="assets/images/WithBeforeImgIcon2_20231215045210hewa.png" alt="Image 1" style={{ display: 'block', margin: '0 auto', maxWidth: '50%', borderRadius: '50%' }} />
-          <Typography variant="caption" align="center" style={{ marginTop: 8,color:"white" }}>Bank Card</Typography>
+          <Typography variant="caption" align="center" style={{ marginTop: 8,color:"#ffffff" }}>Bank Card</Typography>
         </div>
       </Grid>
       <Grid item xs={4}>
-        <div   onClick={() => setWithdrawalMethod('USDT')} style={{ backgroundColor: withdrawalMethod === 'USDT' ? 'rgb(40,160,242)' : 'rgb(55,72,146)', borderRadius: 8, padding: 16, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
+        <div   onClick={() => setWithdrawalMethod('USDT')} style={{ background: withdrawalMethod === 'USDT' ? 'linear-gradient(to right,#f9e39e, #c49440)' : 'rgb(51,51,50)', borderRadius: 8, padding: 16, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
           <img src="assets/images/USDT.png" alt="Image 2" style={{ display: 'block', margin: '0 auto', maxWidth: '50%', borderRadius: '50%' }} />
-          <Typography variant="caption" align="center" style={{ marginTop: 8,color:"white" }}>USDT</Typography>
+          <Typography variant="caption" align="center" style={{ marginTop: 8,color:"#ffffff" }}>USDT</Typography>
         </div>
       </Grid>
       
@@ -388,11 +387,11 @@ useEffect(() => {
         height={30}
         sx={{ mb: 2 }}
       />
-      <Typography variant="h6" sx={{fontSize:"13px",color:"white"}}>{bankDetails.bankName}</Typography>
+      <Typography variant="h6" sx={{fontSize:"13px",color:"#a7a5a1"}}>{bankDetails.bankName}</Typography>
     </Box>
     <Divider orientation="vertical" flexItem sx={{height: '70px', marginLeft: '0'}} /> 
     <Box display="flex" alignItems="center">
-      <Typography variant="body1" sx={{color:"white"}}>{bankDetails.accountNo}</Typography>
+      <Typography variant="body1" sx={{color:"#a7a5a1"}}>{bankDetails.accountNo}</Typography>
       <IconButton>
         <ArrowForwardIosIcon />
       </IconButton>
@@ -425,11 +424,11 @@ useEffect(() => {
         height={30}
         sx={{ mb: 2 }}
       />
-      <Typography variant="h6" sx={{fontSize:"13px",color:"white"}}>{existingUsdtDetails.walletAddress}</Typography>
+      <Typography variant="h6" sx={{fontSize:"13px",color:"#a7a5a1"}}>{existingUsdtDetails.walletAddress}</Typography>
     </Box>
     <Divider orientation="vertical" flexItem sx={{height: '70px', marginLeft: '0'}} /> 
     <Box display="flex" alignItems="center">
-      <Typography variant="body1" sx={{color:"white"}}>{existingUsdtDetails.network}</Typography>
+      <Typography variant="body1" sx={{color:"#a7a5a1"}}>{existingUsdtDetails.network}</Typography>
       <IconButton>
         <ArrowForwardIosIcon />
       </IconButton>
@@ -440,12 +439,12 @@ useEffect(() => {
          width: '97%',
          marginLeft: 'auto',
          marginRight: 'auto',
-         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',backgroundColor:"rgb(54,72,146)", borderRadius:"10px"}}>
+         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',backgroundColor:"rgb(51,51,50)", borderRadius:"10px"}}>
       {(existingBankDetails === null || existingUsdtDetails === null) && (
   <Grid item xs={12}>
-    <div style={{ backgroundColor: 'rgb(54,72,146)', borderRadius: 8, padding: 16, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
+    <div style={{ backgroundColor: 'rgb(51,51,50)', borderRadius: 8, padding: 16, boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
       <img src="/assets/images/download (17).png"  alt="Image 2" style={{ display: 'block', margin: '0 auto', maxWidth: '20%', borderRadius: '50%' }} />
-      <Typography variant="caption" align="center" style={{ marginTop: 8,color:"white" }}>ADD BANK DETAILS</Typography>
+      <Typography variant="caption" align="center" style={{ marginTop: 8,color:"#666462" }}>ADD BANK DETAILS</Typography>
       <Button onClick={() => {
  
     navigate('/addbank');
@@ -471,38 +470,53 @@ useEffect(() => {
 
 
 
-    <div className={classes.root} >
-        <Grid container spacing={3} mt={2}>
-          {/* First row */}
-          <Grid item xs={12}>
-          <TextField
-  className={classes.input}
-  id="outlined-basic"
-  variant="outlined"
-  placeholder="Please enter amount"
-  value={amount}
-  onChange={e => setAmount(e.target.value)}
-  InputProps={{
-    startAdornment: (
-      <InputAdornment position="start">
-        <span style={{ color: 'rgb(42,156,243)',fontSize:"20px",fontWeight:"bold" }}>₹</span>
-      </InputAdornment>
-    ),
-  }}
-/>
+    <div style={{ flexGrow: 1 }}>
+  <Grid container spacing={3} mt={2}>
+    {/* First row */}
+    <Grid item xs={12}>
+      <TextField
+        id="outlined-basic"
+        variant="outlined"
+        placeholder="Please enter amount"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+        sx={{
+          backgroundColor: 'rgb(36,36,36)',
+          '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+              borderColor: 'rgb(217,172,78)',
+            },
+            '&:hover fieldset': {
+              borderColor: 'rgb(217,172,78)',
+            },
+            '&.Mui-focused fieldset': {
+              borderColor: 'rgb(217,172,78)',
+            },
+          },
+          '& .MuiInputBase-input::placeholder': {
+            color: 'rgb(217,172,78)',
+          },
+        }}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <span style={{ color: 'rgb(217,172,78)', fontSize: '20px', fontWeight: 'bold' }}>₹</span>
+            </InputAdornment>
+          ),
+        }}
+      />
+    </Grid>
 
-
-          </Grid>
   
           {/* Second row */}
           <Grid item container xs={12}>
             <Grid item xs={9} >
-              <Typography variant="body2" align="left" sx={{color:"rgb(117,123,166)"}}>Withdrawable Balance </Typography>
-              <Typography variant="body2" align="left" sx={{color:"rgb(117,123,166)"}}>Withdrawable Amount Recived </Typography>
+              <Typography variant="body2" align="left" sx={{color:"rgb(167,165,161)"}}>Withdrawable Balance </Typography>
+              <Typography variant="body2" align="left" sx={{color:"rgb(167,165,161)"}}>Withdrawable Amount Recived </Typography>
             </Grid>
             <Grid item xs={3}>
-              <Typography variant="body2" align="right" ><span style={{color:"rgb(40,164,242)"}}> ₹0</span></Typography>
-              <Typography variant="body2" align="right"><span style={{color:"rgb(40,164,242)"}}> ₹0</span></Typography>
+              <Typography variant="body2" align="right" ><span style={{color:"rgb(221,145,56)"}}> ₹0</span></Typography>
+              <Typography variant="body2" align="right"><span style={{color:"rgb(221,145,56)"}}> ₹0</span></Typography>
             </Grid>
           </Grid>
   
@@ -510,7 +524,7 @@ useEffect(() => {
           <Grid item xs={12}>
           <Button 
   variant="contained" 
-  sx={{backgroundColor:"rgb(117,123,166)", borderRadius:"20px"}} 
+  sx={{background:"linear-gradient(to right,#f9e39e, #c49440)", borderRadius:"20px", color:"rgb(221,145,56)"}} 
   className={classes.button}
   onClick={() => handleWithdraw(amount)}
 >
@@ -522,36 +536,36 @@ useEffect(() => {
           <Grid item xs={12}>
   <List className={classes.list}>
     <ListItem>
-      <ListItemIcon sx={{color:"white"}}>
+      <ListItemIcon sx={{color:"#a7a5a1"}}>
         <BulletPoint />
       </ListItemIcon>
-      <ListItemText primary={<span>Need to bet <span style={{color: 'rgb(40,160,241)'}}>₹{betAmount ? betAmount.remainingBetAmount : "0.00"}</span> to be able to withdraw</span>} />    </ListItem>
+      <ListItemText primary={<span>Need to bet <span style={{color: 'rgb(210,56,56)'}}>₹{betAmount ? betAmount.remainingBetAmount : "0.00"}</span> to be able to withdraw</span>} />    </ListItem>
     <ListItem>
-      <ListItemIcon sx={{color:"white"}}>
+      <ListItemIcon sx={{color:"#a7a5a1"}}>
         <BulletPoint />
       </ListItemIcon>
-      <ListItemText primary={<span>Withdraw Hour <span style={{color: 'rgb(40,160,241)'}}>{withdrawData ? withdrawData.withdrawalStartHour : "8AM"} AM - {withdrawData ? withdrawData.withdrawalEndHour : "9 PM"} PM</span></span>} />
+      <ListItemText primary={<span>Withdraw Hour <span style={{color: 'rgb(210,56,56)'}}>{withdrawData ? withdrawData.withdrawalStartHour : "8AM"} AM - {withdrawData ? withdrawData.withdrawalEndHour : "9 PM"} PM</span></span>} />
     </ListItem>
     <ListItem>
-      <ListItemIcon sx={{color:"white"}}>
+      <ListItemIcon sx={{color:"#a7a5a1"}}>
         <BulletPoint />
       </ListItemIcon>
-      <ListItemText primary={<span>Inday Remaining Withdrawal Times <span style={{color: 'rgb(40,160,241)'}}>{withdrawData ? withdrawData.maxWithdrawRequestsPerDay : "0"}</span></span>} />    </ListItem>
+      <ListItemText primary={<span>Inday Remaining Withdrawal Times <span style={{color: 'rgb(210,56,56)'}}>{withdrawData ? withdrawData.maxWithdrawRequestsPerDay : "0"}</span></span>} />    </ListItem>
     <ListItem>
-      <ListItemIcon sx={{color:"white"}}>
+      <ListItemIcon sx={{color:"#a7a5a1"}}>
         <BulletPoint />
       </ListItemIcon>
-      <ListItemText primary={<span>Withdrawal amount range <span style={{color: 'rgb(40,160,241)'}}>{withdrawData ? withdrawData.minWithdrawAmount : "0"} - {withdrawData ? withdrawData.maxWithdrawAmount
+      <ListItemText primary={<span>Withdrawal amount range <span style={{color: 'rgb(210,56,56)'}}>{withdrawData ? withdrawData.minWithdrawAmount : "0"} - {withdrawData ? withdrawData.maxWithdrawAmount
  : "0"}</span></span>} />
     </ListItem>
     <ListItem>
-      <ListItemIcon sx={{color:"white"}}>
+      <ListItemIcon sx={{color:"#a7a5a1"}}>
         <BulletPoint />
       </ListItemIcon>
       <ListItemText primary="Please confirm your beneficial account information before withdrawing. If your information is incorrect, our company will not be liable for the amount of loss" />
     </ListItem>
     <ListItem>
-      <ListItemIcon sx={{color:"white"}}>
+      <ListItemIcon sx={{color:"#a7a5a1"}}>
         <BulletPoint />
       </ListItemIcon>
       <ListItemText primary="If your beneficial information is incorrect, please contact customer service" />

@@ -285,7 +285,7 @@ const WalletMain = ({ children }) => {
                     variant="determinate"
                     value={progressThirdPartyWallet}
                     size={80}
-                    sx={{ color: "rgb(10,24,70)", position: "absolute" }}
+                    sx={{ color: "#D8D8D8", position: "absolute" }}
                   />
                   <Box
                     top={0}
@@ -345,7 +345,7 @@ const WalletMain = ({ children }) => {
               <Grid container item xs={12} spacing={2} mt={2}>
                 <Grid item xs={3} onClick={() => navigate("/recharge")}>
                   <img
-                    src="assets/images/download (14).png"
+                    src="assets/images/deposit.png"
                     alt="1"
                     width={50}
                     height={50}
@@ -356,7 +356,7 @@ const WalletMain = ({ children }) => {
                 </Grid>
                 <Grid item xs={3} onClick={() => navigate("/withdraw")}>
                   <img
-                    src="assets/images/download (15).png"
+                    src="assets/images/withdraw.png"
                     alt="2"
                     width={50}
                     height={50}
@@ -367,7 +367,7 @@ const WalletMain = ({ children }) => {
                 </Grid>
                 <Grid item xs={3} onClick={() => navigate("/deposit-history")}>
                   <img
-                    src="assets/images/rechargeHistory-195824c7.png"
+                    src="assets/images/rechargeHistory.png"
                     alt=" 3"
                     width={50}
                     height={50}
@@ -378,7 +378,7 @@ const WalletMain = ({ children }) => {
                 </Grid>
                 <Grid item xs={3} onClick={() => navigate("/withdraw-history")}>
                   <img
-                    src="assets/images/withdrawHistory2-840eb5de.png"
+                    src="assets/images/withdrawHistory.png"
                     alt="4"
                     width={50}
                     height={50}
