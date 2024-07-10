@@ -34,7 +34,7 @@ useEffect(() => {
                 <div className="bannerBox">
                     <div className='content'>
                         <div className="contentOne">
-                            <h1>Attndance Bonus</h1>
+                            <h1>Attendance Bonus</h1>
                             <p>Get <b>rewards</b> based on consecutive login days !</p>
                         </div>
                         <div className='contentTwo'>

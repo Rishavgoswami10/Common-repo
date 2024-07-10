@@ -74,7 +74,7 @@ const DepositHistoryMain= ({ children }) => {
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: 'rgb(42,50,112)',
+                backgroundColor: 'rgb(51,51,50)',
                 padding: '8px 16px',
                 color: 'white'
                 

@@ -312,7 +312,7 @@ const SwipeableCards = () => {
                       fontWeight: 600,
                     }}
                   >
-                    VIP Benifit Level
+                    VIP Benefit Level
                   </div>
                 </div>
                 <div className="list" style={{ width: "100%" }}>

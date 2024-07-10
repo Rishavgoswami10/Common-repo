@@ -45,7 +45,7 @@ const AttendanceMain= ({ children }) => {
           height="calc(var(--vh, 1vh) * 100)"
           position="relative"
         >
-          <Box flexGrow={1} sx={{backgroundColor: 'rgb(34,39,91)'}}>
+          <Box flexGrow={1} sx={{backgroundColor: 'rgb(245,70,69)'}}>
 
 
             <Grid
@@ -56,7 +56,7 @@ const AttendanceMain= ({ children }) => {
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: 'Rgb(55,72,146)',
+                backgroundColor: '#333332',
                 padding: '8px 16px',
                 color: 'white'
                 
