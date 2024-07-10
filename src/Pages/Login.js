@@ -97,10 +97,10 @@ const handleregister = async () => {
             position: 'sticky',
             top: 0,
             zIndex: 1000,
-            backgroundColor: 'rgb(42,50,112)',
+            backgroundColor: 'rgb(58,58,58)',
             padding: '8px 16px',
             
-            color: 'white'
+            color: 'black'
           }}
         >
           <Grid item xs={4} textAlign="left">
@@ -141,7 +141,7 @@ const handleregister = async () => {
         justifyContent="flex-start"
         alignItems="flex-start"
         sx={{
-          backgroundColor: 'rgb(42,50,112)',
+          backgroundColor: 'rgb(58,58,58)',
           padding: '16px',
           color: 'white',
           minHeight: 'fit-content'
@@ -159,7 +159,7 @@ const handleregister = async () => {
         justifyContent="flex-start"
         alignItems="flex-start"
         sx={{
-          backgroundColor: '#F7F8FF',
+          backgroundColor: 'rgb(36,36,36)',
           padding: '16px',
           color: 'white',
           minHeight: 'fit-content'
@@ -173,9 +173,9 @@ const handleregister = async () => {
   TabIndicatorProps={{ style: { backgroundColor: tabValue === 0 ? '#FF7172' : 'grey' } }}
 >
   <Tab 
-    icon={<EmailIcon style={{ color: tabValue === 0 ? 'rgb(42,50,112)' : 'grey' }} />} 
+    icon={<EmailIcon style={{ color: tabValue === 0 ? 'rgb(203,158,76)' : 'grey' }} />} 
     label="Login With Mobile" 
-    style={{ color: tabValue === 0 ? '#FF7172' : 'grey' }}
+    style={{ color: tabValue === 0 ? 'rgb(203,158,76)' : 'grey' }}
   />
   {/* <Tab 
     icon={<PhoneIcon style={{ color: tabValue === 1 ? 'rgb(42,50,112)' : 'grey' }} />} 
@@ -185,8 +185,8 @@ const handleregister = async () => {
 </Tabs>
             <TabPanel value={tabValue} index={0}>
             <Box display="flex" alignItems="center" mt={2}>
-                <EmailIcon sx={{color:"rgb(42,50,112)"}} />
-                <FormLabel>Mobile</FormLabel>
+                <EmailIcon sx={{color:"rgb(203,158,76)"}} />
+                <FormLabel sx={{color:"white"}}>Mobile</FormLabel>
               </Box>
               <TextField
                 label="Mobile Number"
@@ -196,11 +196,13 @@ const handleregister = async () => {
                 value={mobile}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                sx={{ backgroundColor: '#FFFFFF' }}
+                sx={{ backgroundColor: 'rgb(58,58,58)',borderRadius: "10px" }}
                 InputProps={{
                     style: { borderRadius: "10px" }
                   }}
-                
+                  InputLabelProps={{
+                    style: { color: "white" },
+                  }}
               />
             </TabPanel>
             <TabPanel value={tabValue} index={1}>
@@ -221,8 +223,8 @@ const handleregister = async () => {
               />
             </TabPanel>
             <Box display="flex" alignItems="center" mt={2}>
-                <LockIcon sx={{color:"rgb(42,50,112)"}}/>
-                <FormLabel>Please enter Password</FormLabel>
+                <LockIcon sx={{color:"rgb(203,158,76)"}}/>
+                <FormLabel sx={{color:"white"}}>Please enter Password</FormLabel>
               </Box>
             <TextField
               label="Password"
@@ -233,7 +235,7 @@ const handleregister = async () => {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              sx={{ backgroundColor: '#FFFFFF' }}
+              sx={{ backgroundColor: 'rgb(58,58,58)',borderRadius: "10px" }}
               InputProps={{
                 style: { borderRadius: "10px" },
                 endAdornment: (
@@ -241,6 +243,9 @@ const handleregister = async () => {
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
                 ),
+              }}
+              InputLabelProps={{
+                style: { color: "white" },
               }}
             />
               
@@ -251,18 +256,18 @@ const handleregister = async () => {
     control={<Radio />} 
     label="Remember Password " 
     labelPlacement="end"
-    style={{ color: 'black' }}
+    style={{ color: 'white' }}
 
   />
 </RadioGroup>
               
             </Box>
-            <Button variant="contained" fullWidth type='submit' style={{ marginBottom: '8px',backgroundColor:"rgb(42,50,112)" ,borderRadius:"300px",fontWeight: "bold" }}>
+            <Button variant="contained" fullWidth type='submit' style={{ marginBottom: '8px',backgroundColor:"rgb(203,158,76)" ,borderRadius:"300px",fontWeight: "bold" }}>
               Log in
             </Button>
-            <Button onClick={handleregister} variant="outlined" color="primary" fullWidth style={{ borderRadius:"300px",borderColor:"rgb(42,50,112)"}}>
+            <Button onClick={handleregister} variant="outlined" color="primary" fullWidth style={{ borderRadius:"300px",borderColor:"rgb(203,158,76)"}}>
   
-  <span style={{ color: 'rgb(42,50,112)',marginLeft:"3px",fontWeight: "bold", }}> Register</span>
+  <span style={{ color: 'rgb(203,158,76)',marginLeft:"3px",fontWeight: "bold", }}> Register</span>
 </Button>
 
           </form>
@@ -272,7 +277,7 @@ const handleregister = async () => {
   justifyContent="flex-start"
   alignItems="flex-start"
   sx={{
-    backgroundColor: '#F7F8FF',
+    backgroundColor: 'rgb(36,36,36)',
     padding: '16px',
     color: 'white',
     minHeight: 'fit-content'
@@ -288,8 +293,8 @@ const handleregister = async () => {
   justifyContent="center"
   sx={{ padding: '16px' }}
 >
-  <SupportAgentIcon style={{ fontSize: 60, color: 'rgb(42,50,112)' }} />
-  <Typography variant="subtitle1" style={{ color: 'black', marginBottom:"150px" }}>Customer Service</Typography>
+  <SupportAgentIcon style={{ fontSize: 60, color: 'rgb(203,158,76)' }} />
+  <Typography variant="subtitle1" style={{ color: 'white', marginBottom:"150px" }}>Customer Service</Typography>
 </Grid>
 
 

@@ -258,7 +258,7 @@ const Register = () => {
             position: "sticky",
             top: 0,
             zIndex: 1000,
-            backgroundColor: "rgb(42,50,112)",
+            backgroundColor: "rgb(58,58,58)",
             padding: "8px 16px",
 
             color: "white",
@@ -328,7 +328,7 @@ const Register = () => {
           justifyContent="flex-start"
           alignItems="flex-start"
           sx={{
-            backgroundColor: "rgb(42,50,112)",
+            backgroundColor: "rgb(58,58,58)",
             padding: "16px",
             color: "white",
             minHeight: "fit-content",
@@ -345,7 +345,7 @@ const Register = () => {
           justifyContent="flex-start"
           alignItems="flex-start"
           sx={{
-            backgroundColor: "#F7F8FF",
+            backgroundColor: "rgb(36,36,36)",
             padding: "16px",
             color: "white",
             minHeight: "fit-content",
@@ -370,12 +370,12 @@ const Register = () => {
                   icon={
                     <EmailIcon
                       style={{
-                        color: tabValue === 0 ? "rgb(42,50,112)" : "grey",
+                        color: tabValue === 0 ? "rgb(217,172,78)" : "grey",
                       }}
                     />
                   }
                   label="Register With Mobile"
-                  style={{ color: tabValue === 0 ? "#FF7172" : "grey" }}
+                  style={{ color: tabValue === 0 ? "rgb(217,172,78)" : "grey" }}
                 />
                 {/* <Tab
                   icon={<PhoneIcon style={{ color: tabValue === 1 ? 'rgb(42,50,112)' : 'grey' }} />}
@@ -385,8 +385,8 @@ const Register = () => {
               </Tabs>
               <TabPanel value={tabValue} index={0}>
                 <Box display="flex" alignItems="center" mt={2}>
-                  <EmailIcon sx={{ color: "rgb(42,50,112)" }} />
-                  <FormLabel>Mobile No</FormLabel>
+                  <EmailIcon sx={{ color: "rgb(217,172,78)" }} />
+                  <FormLabel sx={{color:"white"}}>Mobile No</FormLabel>
                 </Box>
                 <TextField
                   label="Mobile No"
@@ -395,15 +395,18 @@ const Register = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   variant="outlined"
                   margin="normal"
-                  sx={{ backgroundColor: "#FFFFFF" }}
+                  sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
                   InputProps={{
                     style: { borderRadius: "10px" },
+                  }}
+                  InputLabelProps={{
+                    style: { color: "white" },
                   }}
                 />
               </TabPanel>
               <TabPanel value={tabValue} index={1}>
                 <Box display="flex" alignItems="center" mt={2}>
-                  <EmailIcon sx={{ color: "rgb(42,50,112)" }} />
+                  <EmailIcon sx={{ color: "rgb(58,58,58)" }} />
                   <FormLabel>Mobile No</FormLabel>
                 </Box>
                 <TextField
@@ -413,14 +416,17 @@ const Register = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   variant="outlined"
                   margin="normal"
-                  sx={{ backgroundColor: "#FFFFFF" }}
+                  sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
                   InputProps={{
                     style: { borderRadius: "10px" },
                   }}
+                  InputLabelProps={{
+                    style: { color: "white" },
+                  }}
                 />
                 <Box display="flex" alignItems="center" mt={2}>
-                  <PhoneIcon sx={{ color: "rgb(42,50,112)" }} />
-                  <FormLabel>Phone Number</FormLabel>
+                  <PhoneIcon sx={{ color: "rgb(58,58,58)" }} />
+                  <FormLabel sx={{colr:"white"}}>Phone Number</FormLabel>
                 </Box>
                 <TextField
                   label="Phone"
@@ -429,7 +435,7 @@ const Register = () => {
                   onChange={(e) => setPhone(e.target.value)}
                   variant="outlined"
                   margin="normal"
-                  sx={{ backgroundColor: "#FFFFFF" }}
+                  sx={{ backgroundColor: "rgb(58,58,58)" }}
                 />
                 <Box display="flex" alignItems="center" mt={2}>
                   <LockIcon sx={{ color: "rgb(42,50,112)" }} />
@@ -442,9 +448,12 @@ const Register = () => {
                   onChange={(e) => setOtp(e.target.value)}
                   variant="outlined"
                   margin="normal"
-                  sx={{ backgroundColor: "#FFFFFF" }}
+                  sx={{ backgroundColor: "rgb(58,58,58)" }}
                   InputProps={{
                     style: { borderRadius: "10px" },
+                  }}
+                  InputLabelProps={{
+                    style: { color: "white" },
                   }}
                 />
                 <Button
@@ -464,8 +473,8 @@ const Register = () => {
                 </Button>
               </TabPanel>
               <Box display="flex" alignItems="center" mt={2}>
-                <LockIcon sx={{ color: "rgb(42,50,112)" }} />
-                <FormLabel>Set Password</FormLabel>
+                <LockIcon sx={{ color: "rgb(217,172,78)" }} />
+                <FormLabel sx={{color:"white"}}>Set Password</FormLabel>
               </Box>
               <TextField
                 label="Set Password"
@@ -475,20 +484,23 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 variant="outlined"
                 margin="normal"
-                sx={{ backgroundColor: "#FFFFFF" }}
+                sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
                 InputProps={{
                   style: { borderRadius: "10px" },
                   endAdornment: (
-                    <IconButton onClick={handleShowPassword} edge="end">
+                    <IconButton onClick={handleShowPassword} edge="end" sx={{color:"white"}}>
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
                   ),
                 }}
+                InputLabelProps={{
+                  style: { color: "white" },
+                }}
               />
 
               <Box display="flex" alignItems="center" mt={2}>
-                <LockIcon sx={{ color: "rgb(42,50,112)" }} />
-                <FormLabel>Confirm Password</FormLabel>
+                <LockIcon sx={{ color: "rgb(217,172,78)" }} />
+                <FormLabel sx={{color:"white"}}>Confirm Password</FormLabel>
               </Box>
               <TextField
                 label="Confirm Password"
@@ -498,19 +510,22 @@ const Register = () => {
                 fullWidth
                 variant="outlined"
                 margin="normal"
-                sx={{ backgroundColor: "#FFFFFF" }}
+                sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
                 InputProps={{
                   style: { borderRadius: "10px" },
                   endAdornment: (
-                    <IconButton onClick={handleShowPassword} edge="end">
+                    <IconButton onClick={handleShowPassword} edge="end" sx={{color:"white"}}>
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
                   ),
                 }}
+                InputLabelProps={{
+                  style: { color: "white" },
+                }}
               />
               <Box display="flex" alignItems="center" mt={2}>
-                <MoveToInboxIcon sx={{ color: "rgb(42,50,112)" }} />
-                <FormLabel>Invite Code</FormLabel>
+                <MoveToInboxIcon sx={{ color: "rgb(217,172,78)" }} />
+                <FormLabel sx={{color:"white"}}>Invite Code</FormLabel>
               </Box>
               <TextField
                 label="Invite Code"
@@ -522,7 +537,10 @@ const Register = () => {
                 InputProps={{
                   style: { borderRadius: "10px" },
                 }}
-                sx={{ backgroundColor: "#FFFFFF" }}
+                InputLabelProps={{
+                  style: { color: "white" },
+                }}
+                sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
               />
               <Box
                 sx={{
@@ -537,7 +555,7 @@ const Register = () => {
                     control={<Radio />}
                     label="I have read and agree "
                     labelPlacement="end"
-                    style={{ color: "black" }}
+                    style={{ color: "white" }}
                   />
                 </RadioGroup>
               </Box>
@@ -547,8 +565,13 @@ const Register = () => {
                 fullWidth
                 style={{
                   marginBottom: "8px",
-                  backgroundColor: "rgb(42,50,112)",
-                  borderRadius: "300px",
+                  backgroundColor: "rgb(217,172,78)",
+                  borderRadius: "360px",
+                }}
+                sx={{
+                  fontWeight: 'bold',
+                  color: 'white', 
+                  fontSize: '18px'// Replace with the desired royal gold color if different
                 }}
               >
                 Register
@@ -560,7 +583,7 @@ const Register = () => {
                 fullWidth
                 style={{
                   borderRadius: "300px",
-                  borderColor: "RGB(54,142,255)",
+                  borderColor: "rgb(217,172,78)",
                   marginBottom: "150px",
                 }}
               >
@@ -569,7 +592,7 @@ const Register = () => {
                 </span>
                 <span
                   style={{
-                    color: "rgb(42,50,112)",
+                    color: "rgb(217,172,78)",
                     marginLeft: "3px",
                     fontWeight: "bold",
                   }}

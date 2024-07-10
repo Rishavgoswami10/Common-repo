@@ -322,14 +322,14 @@ const AccountMain = ({ children }) => {
 
 <IconButton
   onClick={handleLogout}
-  sx={{ width: '80%', border: '1px solid rgb(92,166,255)', borderRadius: '50px' ,marginTop:"10px",marginBottom:"150px"}}
+  sx={{ width: '80%', border: '1px solid rgb(200,155,72)', borderRadius: '50px' ,marginTop:"10px",marginBottom:"150px"}}
 >
   <Grid container alignItems="center">
     <Grid item>
-      <ExitToAppIcon style={{color:"rgb(92,166,255)"}} />
+      <ExitToAppIcon style={{color:"rgb(200,155,72)"}} />
     </Grid>
     <Grid item xs={10}>
-      <Typography variant="body1" sx={{ marginLeft: '8px',color:"rgb(92,166,255)" }}>Log Out</Typography>
+      <Typography variant="body1" sx={{ marginLeft: '8px',color:"rgb(200,155,72)" }}>Log Out</Typography>
     </Grid>
   </Grid>
 </IconButton>

@@ -210,7 +210,7 @@ const InvitationRulesMain = ({ children }) => {
     <TableCell style={{ border: '1px solid #3A3947',color:"white" }} align="right">Team Deposit</TableCell>
   </TableRow>
 </TableHead>
-<TableBody>
+<TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows.map((row) => (
     <TableRow key={row.stars}>
       <TableCell style={{ border: '1px solid #3A3947' }} component="th" scope="row" sx={{ color: 'orange' }}>
@@ -254,7 +254,7 @@ const InvitationRulesMain = ({ children }) => {
     <TableCell style={{ border: '1px solid #3A3947',color:"white" }} align="right">Tier 4</TableCell>
   </TableRow>
 </TableHead>
-<TableBody>
+<TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows2.map((rows2) => (
     <TableRow key={rows2.stars}>
       <TableCell style={{ border: '1px solid #3A3947',color:"orange" }} component="th" scope="row">
@@ -284,7 +284,7 @@ const InvitationRulesMain = ({ children }) => {
     <TableCell style={{ border: '1px solid #3A3947',color:"white" }} align="right">Tier 4</TableCell>
   </TableRow>
 </TableHead>
-<TableBody>
+<TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows3.map((row) => (
     <TableRow key={row.stars}>
       <TableCell style={{ border: '1px solid #3A3947',color:"orange" }} component="th" scope="row">
@@ -314,7 +314,7 @@ const InvitationRulesMain = ({ children }) => {
     <TableCell style={{ border: '1px solid #3A3947',color:"white" }} align="right">Tier 4</TableCell>
   </TableRow>
 </TableHead>
-<TableBody>
+<TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows4.map((row) => (
     <TableRow key={row.stars}>
       <TableCell style={{ border: '1px solid #3A3947',color:"orange" }} component="th" scope="row">
@@ -344,7 +344,7 @@ const InvitationRulesMain = ({ children }) => {
     <TableCell style={{ border: '1px solid #3A3947',color:"white" }} align="right">Tier 4</TableCell>
   </TableRow>
 </TableHead>
-<TableBody>
+<TableBody style={{backgroundColor:"rgb(51,51,50)"}}>
   {rows5.map((row) => (
     <TableRow key={row.stars}>
       <TableCell style={{ border: '1px solid #3A3947',color:"orange" }} component="th" scope="row">

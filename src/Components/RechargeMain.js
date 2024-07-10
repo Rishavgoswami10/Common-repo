@@ -260,7 +260,7 @@ const PromotionMain = ({ children }) => {
               container
               mt={2}
               style={{
-                backgroundImage: `url('assets/images/TotalAssetsBg-a7cff097.png')`,
+                backgroundImage: `url('assets/3.png')`,
                 borderRadius: 8,
                 padding: 16,
                 backgroundSize: "cover",
@@ -337,8 +337,8 @@ const PromotionMain = ({ children }) => {
                     style={{
                       backgroundColor:
                         paymentMode === mode
-                          ? "rgb(40,164,242)"
-                          : "rgb(55,72,146)",
+                          ? "rgb(205,160,79)"
+                          : "rgb(77,77,76)",
                       borderRadius: 8,
                       color: "white",
                       padding: 16,
@@ -377,7 +377,7 @@ const PromotionMain = ({ children }) => {
                 marginLeft: "auto",
                 marginRight: "auto",
                 boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-                backgroundColor: "rgb(42,50,112)",
+                backgroundColor: "rgb(205,160,79)",
                 borderRadius: "10px",
               }}
             >
@@ -403,7 +403,7 @@ const PromotionMain = ({ children }) => {
                       onClick={() => handleButtonClick(value)}
                       style={{
                         width: "100%",
-                        backgroundColor: "rgb(48,162,243)",
+                        backgroundColor: "rgb(77,77,76)",
                         color: "white",
                       }}
                     >
@@ -420,7 +420,7 @@ const PromotionMain = ({ children }) => {
                       onClick={() => handleButtonClick(value)}
                       style={{
                         width: "100%",
-                        backgroundColor: "rgb(48,162,243)",
+                        backgroundColor: "rgb(77,77,76)",
                         color: "white",
                       }}
                     >
@@ -437,9 +437,9 @@ const PromotionMain = ({ children }) => {
                     fullWidth
                     value={amount}
                     onChange={handleInputChange}
-                    style={{ marginTop: "5px" }}
+                    style={{ marginTop: "5px", color: "rgb(77,77,76)" }}
                     InputProps={{
-                      style: { color: "white" },
+                      style: { color: "rgb(77,77,76)" },
                       inputProps: { "aria-label": "description" },
                     }}
                     InputLabelProps={{
@@ -453,7 +453,7 @@ const PromotionMain = ({ children }) => {
                       marginTop: "5px",
                       marginBottom: "5px",
                       borderRadius: "10px",
-                      backgroundColor: "rgb(48,162,243)",
+                      backgroundColor: "rgb(235,206,132)",
                       color: "white",
                     }}
                     fullWidth
@@ -483,7 +483,7 @@ const PromotionMain = ({ children }) => {
             <Box
               sx={{
                 p: 2,
-                backgroundColor: "rgb(34,39,91)",
+                backgroundColor: "rgb(77,77,76)",
                 borderRadius: "4px",
                 color: "#FFFFFF",
               }}
