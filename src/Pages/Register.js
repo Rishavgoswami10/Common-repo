@@ -271,10 +271,10 @@ const Register = () => {
             </IconButton>
           </Grid>
           <Grid item xs={4} textAlign="center">
-            <img
-              src="assets/images/banner3.png"
+          <img
+              src="assets/logo.png"
               alt="logo"
-              style={{ width: "100px", height: "30px" }}
+              style={{ width: "100px", height: "40px" }}
             />
           </Grid>
           <Grid item xs={4} textAlign="right">
@@ -386,18 +386,39 @@ const Register = () => {
               <TabPanel value={tabValue} index={0}>
                 <Box display="flex" alignItems="center" mt={2}>
                   <EmailIcon sx={{ color: "rgb(217,172,78)" }} />
-                  <FormLabel sx={{color:"white"}}>Mobile No</FormLabel>
+                  <FormLabel sx={{ color: "white" }}>Mobile No</FormLabel>
                 </Box>
                 <TextField
-                  label="Mobile No"
+                  label="Mobile Number"
                   fullWidth
-                  value={mobile}
-                  onChange={(e) => setEmail(e.target.value)}
                   variant="outlined"
                   margin="normal"
-                  sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
+                  value={mobile}
+                  onChange={(e) => mobile(e.target.value)}
+                  required
+                  sx={{
+                    backgroundColor: "rgb(58,58,58)",
+                    borderRadius: "10px",
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Initial border color
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Border color on hover
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Border color when focused
+                      },
+                    },
+                    "& .MuiInputBase-input": {
+                      color: "white", // Text color
+                    },
+                    "& .MuiInputLabel-root": {
+                      color: "white", // Label color
+                    },
+                  }}
                   InputProps={{
-                    style: { borderRadius: "10px" },
+                    style: { borderRadius: "10px", color: "white" },
                   }}
                   InputLabelProps={{
                     style: { color: "white" },
@@ -407,26 +428,48 @@ const Register = () => {
               <TabPanel value={tabValue} index={1}>
                 <Box display="flex" alignItems="center" mt={2}>
                   <EmailIcon sx={{ color: "rgb(58,58,58)" }} />
-                  <FormLabel>Mobile No</FormLabel>
+                  <FormLabel sx={{ color: "white" }}>Mobile No</FormLabel>
                 </Box>
                 <TextField
-                  label="Mobile No"
+                  label="Mobile Number"
                   fullWidth
-                  value={mobile}
-                  onChange={(e) => setEmail(e.target.value)}
                   variant="outlined"
                   margin="normal"
-                  sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
+                  value={mobile}
+                  onChange={(e) => mobile(e.target.value)}
+                  required
+                  sx={{
+                    backgroundColor: "rgb(58,58,58)",
+                    borderRadius: "10px",
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Initial border color
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Border color on hover
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Border color when focused
+                      },
+                    },
+                    "& .MuiInputBase-input": {
+                      color: "white", // Text color
+                    },
+                    "& .MuiInputLabel-root": {
+                      color: "white", // Label color
+                    },
+                  }}
                   InputProps={{
-                    style: { borderRadius: "10px" },
+                    style: { borderRadius: "10px", color: "white" },
                   }}
                   InputLabelProps={{
                     style: { color: "white" },
                   }}
                 />
+
                 <Box display="flex" alignItems="center" mt={2}>
                   <PhoneIcon sx={{ color: "rgb(58,58,58)" }} />
-                  <FormLabel sx={{colr:"white"}}>Phone Number</FormLabel>
+                  <FormLabel sx={{ color: "white" }}>Phone Number</FormLabel>
                 </Box>
                 <TextField
                   label="Phone"
@@ -435,11 +478,38 @@ const Register = () => {
                   onChange={(e) => setPhone(e.target.value)}
                   variant="outlined"
                   margin="normal"
-                  sx={{ backgroundColor: "rgb(58,58,58)" }}
+                  sx={{
+                    backgroundColor: "rgb(58,58,58)",
+                    borderRadius: "10px",
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Initial border color with increased specificity
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Border color on hover with increased specificity
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Border color when focused with increased specificity
+                      },
+                    },
+                    "& .MuiInputBase-input": {
+                      color: "white", // Text color
+                    },
+                    "& .MuiInputLabel-root": {
+                      color: "white", // Label color
+                    },
+                  }}
+                  InputProps={{
+                    style: { borderRadius: "10px", color: "white" },
+                  }}
+                  InputLabelProps={{
+                    style: { color: "white" },
+                  }}
                 />
+
                 <Box display="flex" alignItems="center" mt={2}>
                   <LockIcon sx={{ color: "rgb(42,50,112)" }} />
-                  <FormLabel>Enter OTP</FormLabel>
+                  <FormLabel sx={{ color: "white" }}>Enter OTP</FormLabel>
                 </Box>
                 <TextField
                   label="OTP"
@@ -448,14 +518,35 @@ const Register = () => {
                   onChange={(e) => setOtp(e.target.value)}
                   variant="outlined"
                   margin="normal"
-                  sx={{ backgroundColor: "rgb(58,58,58)" }}
+                  sx={{
+                    backgroundColor: "rgb(58,58,58)",
+                    borderRadius: "10px",
+                    "& .MuiOutlinedInput-root": {
+                      "& fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Initial border color with increased specificity
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Border color on hover with increased specificity
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "rgb(217,172,78) !important", // Border color when focused with increased specificity
+                      },
+                    },
+                    "& .MuiInputBase-input": {
+                      color: "white", // Text color
+                    },
+                    "& .MuiInputLabel-root": {
+                      color: "white", // Label color
+                    },
+                  }}
                   InputProps={{
-                    style: { borderRadius: "10px" },
+                    style: { borderRadius: "10px", color: "white" },
                   }}
                   InputLabelProps={{
                     style: { color: "white" },
                   }}
                 />
+
                 <Button
                   variant="contained"
                   color="primary"
@@ -472,9 +563,10 @@ const Register = () => {
                   Verify OTP
                 </Button>
               </TabPanel>
+
               <Box display="flex" alignItems="center" mt={2}>
                 <LockIcon sx={{ color: "rgb(217,172,78)" }} />
-                <FormLabel sx={{color:"white"}}>Set Password</FormLabel>
+                <FormLabel sx={{ color: "white" }}>Set Password</FormLabel>
               </Box>
               <TextField
                 label="Set Password"
@@ -484,11 +576,35 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 variant="outlined"
                 margin="normal"
-                sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
+                sx={{
+                  backgroundColor: "rgb(58,58,58)",
+                  borderRadius: "10px",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "rgb(217,172,78)", // Initial border color
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "rgb(217,172,78)", // Border color on hover
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "rgb(217,172,78)", // Border color when focused
+                    },
+                  },
+                  "& .MuiInputBase-input": {
+                    color: "white", // Text color
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "white", // Label color
+                  },
+                }}
                 InputProps={{
-                  style: { borderRadius: "10px" },
+                  style: { borderRadius: "10px", color: "white" },
                   endAdornment: (
-                    <IconButton onClick={handleShowPassword} edge="end" sx={{color:"white"}}>
+                    <IconButton
+                      onClick={handleShowPassword}
+                      edge="end"
+                      sx={{ color: "white" }}
+                    >
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
                   ),
@@ -500,7 +616,7 @@ const Register = () => {
 
               <Box display="flex" alignItems="center" mt={2}>
                 <LockIcon sx={{ color: "rgb(217,172,78)" }} />
-                <FormLabel sx={{color:"white"}}>Confirm Password</FormLabel>
+                <FormLabel sx={{ color: "white" }}>Confirm Password</FormLabel>
               </Box>
               <TextField
                 label="Confirm Password"
@@ -510,11 +626,35 @@ const Register = () => {
                 fullWidth
                 variant="outlined"
                 margin="normal"
-                sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
+                sx={{
+                  backgroundColor: "rgb(58,58,58)",
+                  borderRadius: "10px",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "rgb(217,172,78)", // Initial border color
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "rgb(217,172,78)", // Border color on hover
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "rgb(217,172,78)", // Border color when focused
+                    },
+                  },
+                  "& .MuiInputBase-input": {
+                    color: "white", // Text color
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "white", // Label color
+                  },
+                }}
                 InputProps={{
-                  style: { borderRadius: "10px" },
+                  style: { borderRadius: "10px", color: "white" },
                   endAdornment: (
-                    <IconButton onClick={handleShowPassword} edge="end" sx={{color:"white"}}>
+                    <IconButton
+                      onClick={handleShowPassword}
+                      edge="end"
+                      sx={{ color: "white" }}
+                    >
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
                   ),
@@ -523,9 +663,60 @@ const Register = () => {
                   style: { color: "white" },
                 }}
               />
+{/* 
+              <Box display="flex" alignItems="center" mt={2}>
+                <LockIcon sx={{ color: "rgb(217,172,78)" }} />
+                <FormLabel sx={{ color: "white" }}>Confirm Password</FormLabel>
+              </Box>
+              <TextField
+                label="Confirm Password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                type={showPassword ? "text" : "password"}
+                fullWidth
+                variant="outlined"
+                margin="normal"
+                sx={{
+                  backgroundColor: "rgb(58,58,58)",
+                  borderRadius: "10px",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "rgb(217,172,78)", // Initial border color
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "rgb(217,172,78)", // Border color on hover
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "rgb(217,172,78)", // Border color when focused
+                    },
+                  },
+                  "& .MuiInputBase-input": {
+                    color: "white", // Text color
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "white", // Label color
+                  },
+                }}
+                InputProps={{
+                  style: { borderRadius: "10px", color: "white" },
+                  endAdornment: (
+                    <IconButton
+                      onClick={handleShowPassword}
+                      edge="end"
+                      sx={{ color: "white" }}
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  ),
+                }}
+                InputLabelProps={{
+                  style: { color: "white" },
+                }}
+              /> */}
+
               <Box display="flex" alignItems="center" mt={2}>
                 <MoveToInboxIcon sx={{ color: "rgb(217,172,78)" }} />
-                <FormLabel sx={{color:"white"}}>Invite Code</FormLabel>
+                <FormLabel sx={{ color: "white" }}>Invite Code</FormLabel>
               </Box>
               <TextField
                 label="Invite Code"
@@ -535,13 +726,34 @@ const Register = () => {
                 variant="outlined"
                 margin="normal"
                 InputProps={{
-                  style: { borderRadius: "10px" },
+                  style: { borderRadius: "10px", color: "white" },
                 }}
                 InputLabelProps={{
                   style: { color: "white" },
                 }}
-                sx={{ backgroundColor: "rgb(58,58,58)",borderRadius: "10px"  }}
+                sx={{
+                  backgroundColor: "rgb(58,58,58)",
+                  borderRadius: "10px",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "rgb(217,172,78) !important", // Initial border color
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "rgb(217,172,78) !important", // Border color on hover
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "rgb(217,172,78) !important", // Border color when focused
+                    },
+                  },
+                  "& .MuiInputBase-input": {
+                    color: "white", // Text color
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "white", // Label color
+                  },
+                }}
               />
+
               <Box
                 sx={{
                   display: "flex",
@@ -552,10 +764,10 @@ const Register = () => {
                 <RadioGroup row>
                   <FormControlLabel
                     value="remember"
-                    control={<Radio />}
+                    control={<Radio style={{ color: "rgb(217,172,78)" }} />}
                     label="I have read and agree "
                     labelPlacement="end"
-                    style={{ color: "white" }}
+                    sx={{ color: "#ffffff" }}
                   />
                 </RadioGroup>
               </Box>
@@ -569,9 +781,9 @@ const Register = () => {
                   borderRadius: "360px",
                 }}
                 sx={{
-                  fontWeight: 'bold',
-                  color: 'white', 
-                  fontSize: '18px'// Replace with the desired royal gold color if different
+                  fontWeight: "bold",
+                  color: "white",
+                  fontSize: "18px", // Replace with the desired royal gold color if different
                 }}
               >
                 Register
@@ -587,7 +799,7 @@ const Register = () => {
                   marginBottom: "150px",
                 }}
               >
-                <span style={{ color: "black", fontWeight: "bold" }}>
+                <span style={{ color: "white", fontWeight: "bold" }}>
                   I have an account{" "}
                 </span>
                 <span
