@@ -6,6 +6,7 @@ import {
   Grid,
   Box,
   TableBody,
+  TextField,
   TableCell,
   TableRow,
   Table,
@@ -93,38 +94,7 @@ const TabPanel = ({ children, value, index }) => {
     </div>
   );
 };
-const StyledDialog = styled(Dialog)(({ theme }) => ({
-  "& .MuiDialog-paper": {
-    backgroundColor: "#201D2B",
-    maxWidth: "320px", // Adjust the maxWidth as needed
-    width: "100%",
-    maxHeight: "450px", // Adjust the maxHeight as needed
-    height: "auto",
-    color: "white",
-    display: "flex",
-    flexDirection: "column",
 
-    textAlign: "center",
-    overflowY: "auto",
-    borderRadius: "5%", // Enable vertical scrollbar if needed
-  },
-}));
-
-const StyledDialogTitle = styled(DialogTitle)(({ theme }) => ({
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "15px",
-  backgroundColor: "#2AA1F3",
-  color: "white",
-}));
-
-const StyledDialogActions = styled(DialogActions)(({ theme }) => ({
-  padding: "18px",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: "#2B3270",
-  color: "white",
-}));
 const CustomPagination = styled(Pagination)({
   '& .MuiPaginationItem-root': {
     color: '#A8A5A1',
@@ -399,6 +369,7 @@ const RowVisualization = ({ data }) => {
   const rowsPerPage = 10;
   const totalPages = Math.ceil(data.length / rowsPerPage);
 
+
   const handleChangePage = (event, newPage) => {
     setPage(newPage - 1);
   };
@@ -504,6 +475,16 @@ const LotteryAppk = () => {
   const [periodId, setPeriodId] = useState(null);
   const [remainingTime, setRemainingTime] = useState(null);
   const [wallet, setWallet] = useState(0);
+  const [customBetAmount, setCustomBetAmount] = useState("");
+
+  const handleCustomBetChange = (event) => {
+    const betAmount = parseFloat(event.target.value);
+    setCustomBetAmount(event.target.value);
+    if (!isNaN(betAmount) && betAmount > 0) {
+      handleBetAmount(betAmount);
+      setActiveBetAmount(betAmount);
+    }
+  };
 
   const handleDialog = () => {
     setOpen1(!open1);
@@ -1863,7 +1844,13 @@ sx={{
             {values === 3 && renderTab4Content()}
           </Box>
         </Box>
-<Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer} >
+<Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer}  PaperProps={{
+          style: {
+            margin: "auto",
+            maxWidth: "400px", // Set this to the desired size of your square
+          // Adjust height as needed
+          },
+        }} >
           <Grid container alignItems="center"  style={{
                 position: "relative",
                 color: "white",
@@ -1876,8 +1863,8 @@ sx={{
               align="center"
               style={{
                 position: "relative",
-                marginBottom: "20px",
-                height: "100px",
+                marginBottom: "-5px",
+                height: "90px",
                 color: "white",
                 backgroundColor: "#201D2B",
 
@@ -1889,7 +1876,7 @@ sx={{
                   top: 0,
                   left: 0,
                   width: "100%",
-                  height: "100%",
+                  height: "80%",
                   background: selectedColor,
                   clipPath: "polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%)",
                 }}
@@ -1902,8 +1889,8 @@ sx={{
                                 ? "Different"
                                 : selectedItem === "twoSameOneDifferent"
                                 ? "2 Same"
-                                : "3 Same"}</Typography>
-                <Typography variant="body1">{`${totalSum} is selected`}</Typography>
+                                : "3 Same"}:  {`${totalSum} is selected`}</Typography>
+               
               </div>
         
             </Grid>
@@ -1983,6 +1970,31 @@ sx={{
                   align="center"
                   alignItems="center"
                 >
+                   <Typography variant="h6">Add your money</Typography>
+                  <Grid justifyContent="flex-end">
+                    <TextField
+                      label="Add Custom Amount"
+                      variant="outlined"
+                      value={customBetAmount}
+                      onChange={handleCustomBetChange}
+                      style={{
+                        borderRadius: 15,
+                        height: 50,
+                        backgroundColor:"#4D4D4C",
+                        color:"white"
+                      }}
+                      InputProps={{
+                        style: {
+                          color: "white",
+                          borderRadius: 15,
+                          height: 50,
+                        },
+                      }}
+                      InputLabelProps={{
+                        style: { color: "white" },
+                      }}
+                    />
+                    </Grid>
                   <Typography variant="h6">Quantity</Typography>
                   <div
                     className="button1"
@@ -2189,7 +2201,7 @@ sx={{
               color: "#B66E06",
               borderRadius: "20px",
             }
-          : { color: "##A8A5A1",backgroundColor:"#333332" }
+          : { color: "#A8A5A1" }
       }
     />
     <Tab
@@ -2201,7 +2213,7 @@ sx={{
               color: "#B66E06",
               borderRadius: "20px",
             }
-          : { color: "#A8A5A1",backgroundColor:"#333332" }
+          : { color: "#A8A5A1" }
       }
     />
     <Tab
@@ -2213,7 +2225,7 @@ sx={{
               color: "#B66E06",
               borderRadius: "20px",
             }
-          : { color: "#A8A5A1",backgroundColor:"#333332" }
+          : { color: "#A8A5A1" }
       }
     />
           </Tabs>
@@ -2502,80 +2514,114 @@ sx={{
           </TabPanel>
         </Grid>
         <>
-          <StyledDialog
+          <Dialog
             open={open1}
             onClose={handleDialog}
             aria-labelledby="game-rules-dialog-title"
           >
-            <StyledDialogTitle
-              id="game-rules-dialog-title"
-              justifyContent="center"
-              alignItems="center"
-            >
-              How to play
-            </StyledDialogTitle>
-            <DialogContent>
-              <DialogContentText
-                sx={{
-                  color: "white",
-                  padding: "1px",
-                  paddingTop: "20px",
-                  paddingBottom: "20px",
-                  fontSize: "14px",
-                  textAlign: "left",
-                }}
-              >
-                Fast3openwith3numbersineachperiod astheopeningnumber
+          <div
+      style={{
+        position: 'fixed',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '300px',
+        padding: '0',
+        backgroundColor: '#201D2B',
+        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+        borderRadius: '10px',
+        color: 'white',
+        zIndex: 1000,
+      }}
+    > <div
+    style={{
+      backgroundImage: "linear-gradient(to right,#ECD086, #CEA251)",
+      borderTopLeftRadius: '10px',
+      borderTopRightRadius: '10px',
+      padding: '15px',
+      textAlign: 'center',
+    }}
+  >
+    <h2 style={{ margin: 0,color:"#9D6419" }}>How to play</h2>
+  </div>
+  <div
+style={{
+padding: '20px',
+maxHeight: '400px',
+overflowY: 'auto',
+textAlign: 'left ', 
+color:"#6C6672"
+}}
+>
+<p>
+         
+          
+          <span style={{ display: "block", marginBottom: "20px" }}></span>
+          Fast3openwith3numbersineach  periodastheopeningnumber
                 Theopeningnumbersare111to666 Naturalnumber .Nozerosinthearray
                 Andtheopeningnumbersareinno particularorder
                 Quick3istoguessallorpartof the3winningnumbers.
-                <br />
-                SumValue
-                <br />
+          <br />
+          <span style={{ display: "block", marginBottom: "20px" }}>
+          SumValue
                 Placeabetonthesumofthreenumbers
-                <br />
+              
                 Choose3samenumberall
-                <br />
+               
                 Forallthesamethreenumbers
-                <br />
+              
                 Makeanall-inclusivebet
-                <br />
+              
                 Choose3samenumbersingle
                 <br />
                 Fromallthesamethreenumbers
                 <br />
-                Chooseagroupofnumbersinanyofthemto placebets
+                Chooseagroupofnumbers <br />
+                inanyofthemto placebets
                 <br />
                 Choose2SameMultiple
                 <br />
-                Placeabetontwodesignatedsamenumber sandanarbitrary
+                Placeabetontwodesignated<br />samenumber  sandanarbitrary <br />
                 numberamongthethreenumbers
                 <br />
                 Choose2SameSingle
                 <br />
-                Placeabetontwodesignatedsamenumbers andadesignated
+                Placeabetontwodesignated<br />samenumbersandadesignated
                 <br />
-                differentnumberamongthethreenumbers
+                differentnumberamongthe<br />threenumbers
                 <br />
                 3numbersdifferent
-              </DialogContentText>
-            </DialogContent>
-            <StyledDialogActions>
-              <Button
-                onClick={handleDialog}
-                sx={{
-                  color: "white",
-                  backgroundColor: "#2986F2",
-                  padding: "10px",
-                  paddingLeft: "30px",
-                  paddingRight: "30px",
-                  borderRadius: "20px",
-                }}
-              >
-                Close
-              </Button>
-            </StyledDialogActions>
-          </StyledDialog>
+                </span>
+        </p>
+          </div> 
+
+<div
+  style={{
+    backgroundColor: '#333332',
+    borderBottomLeftRadius: '10px',
+    borderBottomRightRadius: '10px',
+    padding: '20px',
+    textAlign: 'center',
+  }}
+>
+  <div
+    style={{
+      backgroundImage: "linear-gradient(to right,#F2D991, #D0A554)",
+      padding: '10px 20px',
+      width: 'fit-content',
+      margin: '0 auto',
+      textAlign: 'center',
+      color:"white",
+      cursor: 'pointer',
+      borderRadius: '5px', // Make it look more like a button
+    }}
+    onClick={handleDialog} // Attach onClick event to the inner div
+  >
+    Close
+  </div>
+</div>
+</div>
+          </Dialog>
           {/* ...rest of the code... */}
           {/* <Dialog
       open={open}

@@ -14,8 +14,11 @@ const BottomNavigationArea = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [value, setValue] = useState(location.pathname);
+  
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
+
 
 
   useEffect(() => {
@@ -37,11 +40,10 @@ const BottomNavigationArea = () => {
         bottom: 0,
         padding: '6px 0',
         backgroundColor: '#333332',
-        marginLeft: '-5px',
-        borderRadius:"20px",
-        width: '99%', // make BottomNavigation responsive
-        maxWidth: matches ? '396px' : 'none', // limit maximum width for larger devices
-        margin: 'auto', // center BottomNavigation
+        width: '100%',
+        maxWidth:isSmallScreen ? '': "396px",
+        margin: 'auto',
+ // Adjust height based on screen size
       }}
     >
       <BottomNavigationAction

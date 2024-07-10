@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import IconButton from "@mui/material/IconButton";
 import Mobile from "../Components/Mobile";
-import { Typography, Grid, Box } from "@mui/material";
+import { Typography, Grid, Box,TextField } from "@mui/material";
 import Play from "./Play";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
@@ -150,6 +150,16 @@ const Head = () => {
   const timeParts = (remainingTime || '00:00').split(':');
   const minutes = timeParts[0] || '00';
   const seconds = timeParts[1] || '00';
+  const [customBetAmount, setCustomBetAmount] = useState("");
+
+  const handleCustomBetChange = (event) => {
+    const betAmount = parseFloat(event.target.value);
+    setCustomBetAmount(event.target.value);
+    if (!isNaN(betAmount) && betAmount > 0) {
+      handleBetAmount(betAmount);
+      setActiveBetAmount(betAmount);
+    }
+  };
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
   };
@@ -417,6 +427,12 @@ setLastAlertedPeriodId(periodId);
         break;
       case "big":
         setSelectedColor("rgb(255,168,46)");
+        break;
+      case "mix1":
+        setSelectedColor('linear-gradient(to right, rgb(253,86,92) 50%, rgb(182,89,254) 50%)');
+        break;
+      case "mix2":
+         setSelectedColor('linear-gradient(to right, rgb(64,173,114) 50%, rgb(182,89,254) 50%)');
         break;
       default:
         setSelectedColor("RGB(71,129,255)");
@@ -945,7 +961,7 @@ useEffect(() => {
                 style={{ width: "15%" }}
                 onClick={() => {
                   handleOpenDrawer("0");
-                  handleEventSelection("violet");
+                  handleEventSelection("mix1");
                 }}
               />
               <img
@@ -992,7 +1008,7 @@ useEffect(() => {
                 style={{ width: "15%" }}
                 onClick={() => {
                   handleOpenDrawer("5");
-                  handleEventSelection("green");
+                  handleEventSelection("mix2");
                 }}
               />
               <img
@@ -1108,11 +1124,19 @@ useEffect(() => {
   </MuiAlert>
 </Snackbar>
 
-        <Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer} >
+        <Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer}
+         PaperProps={{
+          style: {
+            margin: "auto",
+            maxWidth: "400px", // Set this to the desired size of your square
+          // Adjust height as needed
+          },
+        }} >
           <Grid container alignItems="center"  style={{
                 position: "relative",
                 color: "white",
                 backgroundColor: "#201D2B",
+               
 
               }}>
             <Grid
@@ -1121,8 +1145,8 @@ useEffect(() => {
               align="center"
               style={{
                 position: "relative",
-                marginBottom: "20px",
-                height: "100px",
+                marginBottom: "-5px",
+                height: "90px",
                 color: "white",
                 backgroundColor: "#201D2B",
 
@@ -1134,7 +1158,7 @@ useEffect(() => {
                   top: 0,
                   left: 0,
                   width: "100%",
-                  height: "100%",
+                  height: "70%",
                   background: selectedColor,
                   clipPath: "polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%)",
                 }}
@@ -1216,6 +1240,31 @@ useEffect(() => {
                   align="center"
                   alignItems="center"
                 >
+                   <Typography variant="h6">Add your money</Typography>
+                  <Grid justifyContent="flex-end">
+                    <TextField
+                      label="Add Custom Amount"
+                      variant="outlined"
+                      value={customBetAmount}
+                      onChange={handleCustomBetChange}
+                      style={{
+                        borderRadius: 15,
+                        height: 50,
+                        backgroundColor:"#4D4D4C",
+                        color:"white"
+                      }}
+                      InputProps={{
+                        style: {
+                          color: "white",
+                          borderRadius: 15,
+                          height: 50,
+                        },
+                      }}
+                      InputLabelProps={{
+                        style: { color: "white" },
+                      }}
+                    />
+                    </Grid>
                   <Typography variant="h6">Quantity</Typography>
                   <div
                     className="button1"
@@ -1229,7 +1278,7 @@ useEffect(() => {
 
                   <Typography
                     variant="body1"
-                    style={{ border: "1px solid black", width: "50px",backgroundColor:"black" }}
+                    style={{ border: "1px solid #242424", width: "50px",backgroundColor:"#242424" }}
                   >
                     {multiplier}
                   </Typography>
@@ -1384,14 +1433,16 @@ useEffect(() => {
 
         <Grid mt={2}>
         <Tabs
-    value={value}
-    onChange={handleChange}
-    indicatorColor="transparent"
-    style={{
-      marginLeft: "20px",
-    }}
-  >
-    <Tab
+            value={value}
+            onChange={handleChange}
+            indicatorColor="transparent"
+            style={{
+              marginLeft: "20px",
+              marginBottom: "10px",
+              paddingTop: "20px",
+            }}
+          >
+             <Tab
       label="Game History"
       style={
         value === 0
@@ -1400,7 +1451,7 @@ useEffect(() => {
               color: "#B66E06",
               borderRadius: "20px",
             }
-          : { color: "##A8A5A1",backgroundColor:"#333332" }
+          : { color: "#A8A5A1" }
       }
     />
     <Tab
@@ -1412,7 +1463,7 @@ useEffect(() => {
               color: "#B66E06",
               borderRadius: "20px",
             }
-          : { color: "#A8A5A1",backgroundColor:"#333332" }
+          : { color: "#A8A5A1" }
       }
     />
     <Tab
@@ -1424,10 +1475,10 @@ useEffect(() => {
               color: "#B66E06",
               borderRadius: "20px",
             }
-          : { color: "#A8A5A1",backgroundColor:"#333332" }
+          : { color: "#A8A5A1" }
       }
     />
-  </Tabs>
+          </Tabs>
           <TabPanel value={value} index={0}>
             <CustomTable data={rows} />
           </TabPanel>
