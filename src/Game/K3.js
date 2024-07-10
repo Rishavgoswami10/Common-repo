@@ -869,20 +869,17 @@ const LotteryAppk = () => {
     // ... your existing code ...
 
     switch (event) {
-      case "violet":
-        setSelectedColor("RGB(182,89,254)");
+      case "Total":
+        setSelectedColor("#67D99C"); // Half green, half red
         break;
-      case "green":
-        setSelectedColor("RGB(64,173,114)");
+      case "2 same":
+        setSelectedColor("#633DA6");
         break;
-      case "red":
-        setSelectedColor("RGB(253,86,92)");
+      case "3 same":
+        setSelectedColor("#7E3554");
         break;
-      case "yellow":
-        setSelectedColor(" RGB(71,129,255)");
-        break;
-      case "blue":
-        setSelectedColor("RGB(253,86,92)");
+      case "Different":
+        setSelectedColor(" #9B48DB");
         break;
       default:
         setSelectedColor(" RGB(71,129,255)");
@@ -951,7 +948,7 @@ const LotteryAppk = () => {
               }}
               onClick={() => {
                 handleOpenDrawer(image.label);
-                handleEventSelection("green");
+                handleEventSelection("Total");
                 setselectedItem("totalSum");
               }}
             >
@@ -987,7 +984,7 @@ const LotteryAppk = () => {
             item
             onClick={() => {
               handleOpenDrawer("Big");
-              handleEventSelection("green");
+              handleEventSelection("Total");
               setselectedItem("size");
             }}
             style={{
@@ -1014,7 +1011,7 @@ const LotteryAppk = () => {
             item
             onClick={() => {
               handleOpenDrawer("Small");
-              handleEventSelection("green");
+              handleEventSelection("Total");
               setselectedItem("size");
             }}
             style={{
@@ -1040,7 +1037,7 @@ const LotteryAppk = () => {
             item
             onClick={() => {
               handleOpenDrawer("Odd");
-              handleEventSelection("green");
+              handleEventSelection("Total");
               setselectedItem("size");
             }}
             style={{
@@ -1066,7 +1063,7 @@ const LotteryAppk = () => {
             item
             onClick={() => {
               handleOpenDrawer("Even");
-              handleEventSelection("green");
+              handleEventSelection("Total");
               setselectedItem("size");
             }}
             style={{
@@ -1147,7 +1144,7 @@ const LotteryAppk = () => {
                     }}
                     onClick={() => {
                       handleOpenDrawer(value);
-                      handleEventSelection("green");
+                      handleEventSelection("2 same");
                       setselectedItem("twoSameOneDifferent");
                     }}
                   >
@@ -1210,7 +1207,7 @@ const LotteryAppk = () => {
                       }}
                       onClick={() => {
                         handleOpenDrawer(value);
-                        handleEventSelection("white");
+                        handleEventSelection("3 same");
                         setselectedItem("threeSame");
                       }}
                     >
@@ -1233,7 +1230,7 @@ const LotteryAppk = () => {
                 }}
                 onClick={() => {
                   handleOpenDrawer(item.value);
-                  handleEventSelection("white");
+                  handleEventSelection("3 same");
                   setselectedItem("threeSame");
                 }}
               >
@@ -1303,7 +1300,7 @@ const LotteryAppk = () => {
             }}
             onClick={() => {
               handleOpenDrawer("3 continuous numbers");
-              handleEventSelection("green");
+              handleEventSelection("Different");
               setselectedItem("threeDifferentNumbers");
             }}
           >
@@ -1412,7 +1409,7 @@ const LotteryAppk = () => {
       setSelectedNumbers1([...selectedNumbers1, value]);
     } else {
       handleOpenDrawer(selectedNumbers1.join(""));
-      handleEventSelection("green");
+      handleEventSelection("Different");
       setselectedItem("threeDifferentNumbers");
       setSelectedNumbers1([]);
     }
@@ -1423,7 +1420,7 @@ const LotteryAppk = () => {
       setSelectedNumbers2([...selectedNumbers2, value]);
     } else {
       handleOpenDrawer(selectedNumbers2.join(""));
-      handleEventSelection("green");
+      handleEventSelection("Different");
       setselectedItem("threeDifferentNumbers");
       setSelectedNumbers2([]);
     }
@@ -1866,9 +1863,13 @@ sx={{
             {values === 3 && renderTab4Content()}
           </Box>
         </Box>
+<Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer} >
+          <Grid container alignItems="center"  style={{
+                position: "relative",
+                color: "white",
+                backgroundColor: "#201D2B",
 
-        <Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer}>
-          <Grid container alignItems="center">
+              }}>
             <Grid
               item
               xs={12}
@@ -1878,7 +1879,8 @@ sx={{
                 marginBottom: "20px",
                 height: "100px",
                 color: "white",
-                backgroundColor: "transparent",
+                backgroundColor: "#201D2B",
+
               }}
             >
               <div
@@ -1903,6 +1905,7 @@ sx={{
                                 : "3 Same"}</Typography>
                 <Typography variant="body1">{`${totalSum} is selected`}</Typography>
               </div>
+        
             </Grid>
 
             <Grid item xs={12}>
@@ -1913,7 +1916,8 @@ sx={{
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 1 ? selectedColor : undefined,
+                      activeBetAmount === 1 ? '#D9AC4F' : '#4D4D4C',
+                      color: activeBetAmount === 1 ?"#A25206":"white"
                   }}
                   onClick={() => {
                     handleBetAmount(1);
@@ -1927,7 +1931,8 @@ sx={{
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 10 ? selectedColor : undefined,
+                      activeBetAmount === 10 ? '#D9AC4F' : '#4D4D4C',
+                      color: activeBetAmount === 10 ?"#A25206":"white"
                   }}
                   onClick={() => {
                     handleBetAmount(10);
@@ -1941,7 +1946,8 @@ sx={{
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 100 ? selectedColor : undefined,
+                      activeBetAmount === 100 ? '#D9AC4F' : '#4D4D4C',
+                      color: activeBetAmount === 100 ?"#A25206":"white"
                   }}
                   onClick={() => {
                     handleBetAmount(100);
@@ -1955,7 +1961,8 @@ sx={{
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 1000 ? selectedColor : undefined,
+                      activeBetAmount === 1000 ? '#D9AC4F' : '#4D4D4C',
+                      color: activeBetAmount === 1000 ?"#A25206":"white"
                   }}
                   onClick={() => {
                     handleBetAmount(1000);
@@ -1982,19 +1989,21 @@ sx={{
                     onClick={() =>
                       setMultiplier(multiplier > 1 ? multiplier - 1 : 1)
                     }
+                    style={{backgroundColor:'#D9AC4F',color:"#A25206"}}
                   >
                     -
                   </div>
 
                   <Typography
                     variant="body1"
-                    style={{ border: "1px solid black", width: "50px" }}
+                    style={{ border: "1px solid #242424", width: "50px",backgroundColor:"#242424" }}
                   >
                     {multiplier}
                   </Typography>
                   <div
                     className="button1"
                     onClick={() => setMultiplier(multiplier + 1)}
+                    style={{backgroundColor:'#D9AC4F',color:"#A25206"}}
                   >
                     +
                   </div>
@@ -2010,7 +2019,7 @@ sx={{
                     setActiveButton(1);
                   }}
                   style={
-                    activeButton === 1 ? { backgroundColor: selectedColor } : {}
+                    activeButton === 1 ? { backgroundColor: '#D9AC4F',color:"#A25206" } : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X1
@@ -2022,7 +2031,7 @@ sx={{
                     setActiveButton(5);
                   }}
                   style={
-                    activeButton === 5 ? { backgroundColor: selectedColor } : {}
+                    activeButton === 5 ? { backgroundColor: '#D9AC4F',color:"#A25206" } : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X5
@@ -2035,8 +2044,8 @@ sx={{
                   }}
                   style={
                     activeButton === 10
-                      ? { backgroundColor: selectedColor }
-                      : {}
+                      ? { backgroundColor: '#D9AC4F',color:"#A25206" }
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X10
@@ -2049,8 +2058,8 @@ sx={{
                   }}
                   style={
                     activeButton === 20
-                      ? { backgroundColor: selectedColor }
-                      : {}
+                      ? { backgroundColor: '#D9AC4F',color:"#A25206" }
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X20
@@ -2063,8 +2072,8 @@ sx={{
                   }}
                   style={
                     activeButton === 50
-                      ? { backgroundColor: selectedColor }
-                      : {}
+                      ? { backgroundColor: '#D9AC4F',color:"#A25206" }
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X50
@@ -2077,8 +2086,8 @@ sx={{
                   }}
                   style={
                     activeButton === 100
-                      ? { backgroundColor: selectedColor }
-                      : {}
+                      ? { backgroundColor: '#D9AC4F',color:"#A25206" }
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X100
@@ -2092,7 +2101,7 @@ sx={{
                   <Button
                     onClick={handleCancelBet}
                     fullWidth
-                    style={{ backgroundColor: "black" }}
+                    style={{ backgroundColor: "#4D4D4C",color:"#817F7C" }}
                     variant="contained"
                   >
                     Cancel
@@ -2102,7 +2111,7 @@ sx={{
                   <Button
                     onClick={handlePlaceBet}
                     fullWidth
-                    style={{ background: selectedColor }}
+                    style={{ background: '#D9AC4F',color:"#A25206" }}
                     variant="contained"
                   >{`Total Bet: ${betAmount * multiplier}`}</Button>
                 </Grid>
@@ -2110,6 +2119,7 @@ sx={{
             </Grid>
           </Grid>
         </Drawer>
+        
         <Snackbar
           open={openSnackbar}
           autoHideDuration={1000}

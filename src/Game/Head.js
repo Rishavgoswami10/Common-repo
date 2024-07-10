@@ -1108,8 +1108,13 @@ useEffect(() => {
   </MuiAlert>
 </Snackbar>
 
-        <Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer}>
-          <Grid container alignItems="center">
+        <Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer} >
+          <Grid container alignItems="center"  style={{
+                position: "relative",
+                color: "white",
+                backgroundColor: "#201D2B",
+
+              }}>
             <Grid
               item
               xs={12}
@@ -1119,7 +1124,8 @@ useEffect(() => {
                 marginBottom: "20px",
                 height: "100px",
                 color: "white",
-                backgroundColor: "transparent",
+                backgroundColor: "#201D2B",
+
               }}
             >
               <div
@@ -1147,7 +1153,7 @@ useEffect(() => {
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 1 ? selectedColor : undefined,
+                      activeBetAmount === 1 ? selectedColor : '#4D4D4C',
                   }}
                   onClick={() => {
                     handleBetAmount(1);
@@ -1161,7 +1167,7 @@ useEffect(() => {
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 10 ? selectedColor : undefined,
+                      activeBetAmount === 10 ? selectedColor : '#4D4D4C',
                   }}
                   onClick={() => {
                     handleBetAmount(10);
@@ -1175,7 +1181,7 @@ useEffect(() => {
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 100 ? selectedColor : undefined,
+                      activeBetAmount === 100 ? selectedColor : '#4D4D4C',
                   }}
                   onClick={() => {
                     handleBetAmount(100);
@@ -1189,7 +1195,7 @@ useEffect(() => {
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 1000 ? selectedColor : undefined,
+                      activeBetAmount === 1000 ? selectedColor : '#4D4D4C',
                   }}
                   onClick={() => {
                     handleBetAmount(1000);
@@ -1216,19 +1222,21 @@ useEffect(() => {
                     onClick={() =>
                       setMultiplier(multiplier > 1 ? multiplier - 1 : 1)
                     }
+                    style={{backgroundColor:selectedColor}}
                   >
                     -
                   </div>
 
                   <Typography
                     variant="body1"
-                    style={{ border: "1px solid black", width: "50px" }}
+                    style={{ border: "1px solid black", width: "50px",backgroundColor:"black" }}
                   >
                     {multiplier}
                   </Typography>
                   <div
                     className="button1"
                     onClick={() => setMultiplier(multiplier + 1)}
+                    style={{backgroundColor:selectedColor}}
                   >
                     +
                   </div>
@@ -1244,7 +1252,7 @@ useEffect(() => {
                     setActiveButton(1);
                   }}
                   style={
-                    activeButton === 1 ? { backgroundColor: selectedColor } : {}
+                    activeButton === 1 ? { backgroundColor: selectedColor } : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X1
@@ -1256,7 +1264,7 @@ useEffect(() => {
                     setActiveButton(5);
                   }}
                   style={
-                    activeButton === 5 ? { backgroundColor: selectedColor } : {}
+                    activeButton === 5 ? { backgroundColor: selectedColor } : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X5
@@ -1270,7 +1278,7 @@ useEffect(() => {
                   style={
                     activeButton === 10
                       ? { backgroundColor: selectedColor }
-                      : {}
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X10
@@ -1284,7 +1292,7 @@ useEffect(() => {
                   style={
                     activeButton === 20
                       ? { backgroundColor: selectedColor }
-                      : {}
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X20
@@ -1298,7 +1306,7 @@ useEffect(() => {
                   style={
                     activeButton === 50
                       ? { backgroundColor: selectedColor }
-                      : {}
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X50
@@ -1312,7 +1320,7 @@ useEffect(() => {
                   style={
                     activeButton === 100
                       ? { backgroundColor: selectedColor }
-                      : {}
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X100
@@ -1326,7 +1334,7 @@ useEffect(() => {
                   <Button
                     onClick={handleCancelBet}
                     fullWidth
-                    style={{ backgroundColor: "black" }}
+                    style={{ backgroundColor: "#4D4D4C" }}
                     variant="contained"
                   >
                     Cancel

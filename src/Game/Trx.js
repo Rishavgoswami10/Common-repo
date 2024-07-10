@@ -56,25 +56,25 @@ const images = [
     id: 1,
     src: "games/assets/time-5d4e96a3.png",
     altSrc: "games/assets/time_a-07f92409.png",
-    subtitle: "K3 Lottery 1Min",
+    subtitle: "TRX Lottery 1Min",
   },
   {
     id: 2,
     src: "games/assets/time-5d4e96a3.png",
     altSrc: "games/assets/time_a-07f92409.png",
-    subtitle: "K3 Lottery 3Min",
+    subtitle: "TRX Lottery 3Min",
   },
   {
     id: 3,
     src: "games/assets/time-5d4e96a3.png",
     altSrc: "games/assets/time_a-07f92409.png",
-    subtitle: "K3 Lottery 5Min",
+    subtitle: "TRX Lottery 5Min",
   },
   {
     id: 4,
     src: "games/assets/time-5d4e96a3.png",
     altSrc: "games/assets/time_a-07f92409.png",
-    subtitle: "K3 Lottery 10Min",
+    subtitle: "TRX Lottery 10Min",
   },
 ];
 
@@ -1281,8 +1281,13 @@ sx={{
           </MuiAlert>
         </Snackbar>
 
-        <Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer}>
-          <Grid container alignItems="center">
+        <Drawer anchor="bottom" open={drawerOpen} onClose={handleCloseDrawer} >
+          <Grid container alignItems="center"  style={{
+                position: "relative",
+                color: "white",
+                backgroundColor: "#201D2B",
+
+              }}>
             <Grid
               item
               xs={12}
@@ -1292,7 +1297,8 @@ sx={{
                 marginBottom: "20px",
                 height: "100px",
                 color: "white",
-                backgroundColor: "transparent",
+                backgroundColor: "#201D2B",
+
               }}
             >
               <div
@@ -1307,7 +1313,7 @@ sx={{
                 }}
               ></div>
               <div style={{ position: "relative" }}>
-                <Typography variant="h6">{`Win Go ${selectedTimer}`}</Typography>
+                <Typography variant="h6">{`TRX Win ${selectedTimer}`}</Typography>
                 <Typography variant="body1">{`${selectedItem} is selected`}</Typography>
               </div>
             </Grid>
@@ -1320,7 +1326,7 @@ sx={{
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 1 ? selectedColor : undefined,
+                      activeBetAmount === 1 ? selectedColor : '#4D4D4C',
                   }}
                   onClick={() => {
                     handleBetAmount(1);
@@ -1334,7 +1340,7 @@ sx={{
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 10 ? selectedColor : undefined,
+                      activeBetAmount === 10 ? selectedColor : '#4D4D4C',
                   }}
                   onClick={() => {
                     handleBetAmount(10);
@@ -1348,7 +1354,7 @@ sx={{
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 100 ? selectedColor : undefined,
+                      activeBetAmount === 100 ? selectedColor : '#4D4D4C',
                   }}
                   onClick={() => {
                     handleBetAmount(100);
@@ -1362,7 +1368,7 @@ sx={{
                   style={{
                     borderRadius: 50,
                     backgroundColor:
-                      activeBetAmount === 1000 ? selectedColor : undefined,
+                      activeBetAmount === 1000 ? selectedColor : '#4D4D4C',
                   }}
                   onClick={() => {
                     handleBetAmount(1000);
@@ -1389,19 +1395,21 @@ sx={{
                     onClick={() =>
                       setMultiplier(multiplier > 1 ? multiplier - 1 : 1)
                     }
+                    style={{backgroundColor:selectedColor}}
                   >
                     -
                   </div>
 
                   <Typography
                     variant="body1"
-                    style={{ border: "1px solid black", width: "50px" }}
+                    style={{ border: "1px solid black", width: "50px",backgroundColor:"black" }}
                   >
                     {multiplier}
                   </Typography>
                   <div
                     className="button1"
                     onClick={() => setMultiplier(multiplier + 1)}
+                    style={{backgroundColor:selectedColor}}
                   >
                     +
                   </div>
@@ -1417,7 +1425,7 @@ sx={{
                     setActiveButton(1);
                   }}
                   style={
-                    activeButton === 1 ? { backgroundColor: selectedColor } : {}
+                    activeButton === 1 ? { backgroundColor: selectedColor } : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X1
@@ -1429,7 +1437,7 @@ sx={{
                     setActiveButton(5);
                   }}
                   style={
-                    activeButton === 5 ? { backgroundColor: selectedColor } : {}
+                    activeButton === 5 ? { backgroundColor: selectedColor } : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X5
@@ -1443,7 +1451,7 @@ sx={{
                   style={
                     activeButton === 10
                       ? { backgroundColor: selectedColor }
-                      : {}
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X10
@@ -1457,7 +1465,7 @@ sx={{
                   style={
                     activeButton === 20
                       ? { backgroundColor: selectedColor }
-                      : {}
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X20
@@ -1471,7 +1479,7 @@ sx={{
                   style={
                     activeButton === 50
                       ? { backgroundColor: selectedColor }
-                      : {}
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X50
@@ -1485,20 +1493,21 @@ sx={{
                   style={
                     activeButton === 100
                       ? { backgroundColor: selectedColor }
-                      : {}
+                      : { backgroundColor:'#4D4D4C'}
                   }
                 >
                   X100
                 </div>
               </Grid>
             </Grid>
+
             <Grid item xs={12} mt={2}>
               <Grid container justifyContent="space-around" spacing={0}>
                 <Grid item xs={3}>
                   <Button
                     onClick={handleCancelBet}
                     fullWidth
-                    style={{ backgroundColor: "black" }}
+                    style={{ backgroundColor: "#4D4D4C" }}
                     variant="contained"
                   >
                     Cancel
@@ -1516,7 +1525,6 @@ sx={{
             </Grid>
           </Grid>
         </Drawer>
-
         <Dialog
           open={openDialog}
           aria-labelledby="alert-dialog-title"
