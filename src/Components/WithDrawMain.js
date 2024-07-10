@@ -474,38 +474,42 @@ useEffect(() => {
   <Grid container spacing={3} mt={2}>
     {/* First row */}
     <Grid item xs={12}>
-      <TextField
-        id="outlined-basic"
-        variant="outlined"
-        placeholder="Please enter amount"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-        sx={{
-          backgroundColor: 'rgb(36,36,36)',
-          '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-              borderColor: 'rgb(217,172,78)',
-            },
-            '&:hover fieldset': {
-              borderColor: 'rgb(217,172,78)',
-            },
-            '&.Mui-focused fieldset': {
-              borderColor: 'rgb(217,172,78)',
-            },
-          },
-          '& .MuiInputBase-input::placeholder': {
-            color: 'rgb(217,172,78)',
-          },
-        }}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <span style={{ color: 'rgb(217,172,78)', fontSize: '20px', fontWeight: 'bold' }}>₹</span>
-            </InputAdornment>
-          ),
-        }}
-      />
-    </Grid>
+  <TextField
+    id="outlined-basic"
+    variant="outlined"
+    placeholder="Please enter amount"
+    value={amount}
+    onChange={(e) => setAmount(e.target.value)}
+    sx={{
+      backgroundColor: 'rgb(36,36,36)',
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+          borderColor: 'rgb(217,172,78)',
+        },
+        '&:hover fieldset': {
+          borderColor: 'rgb(217,172,78)',
+        },
+        '&.Mui-focused fieldset': {
+          borderColor: 'rgb(217,172,78)',
+        },
+        '& input': {
+          color: '#ffffff', // This sets the input text color to white
+        },
+      },
+      '& .MuiInputBase-input::placeholder': {
+        color: '#ffffff',
+      },
+    }}
+    InputProps={{
+      startAdornment: (
+        <InputAdornment position="start">
+          <span style={{ color: 'rgb(217,172,78)', fontSize: '20px', fontWeight: 'bold' }}>₹</span>
+        </InputAdornment>
+      ),
+    }}
+  />
+</Grid>
+
 
   
           {/* Second row */}
@@ -524,7 +528,7 @@ useEffect(() => {
           <Grid item xs={12}>
           <Button 
   variant="contained" 
-  sx={{background:"linear-gradient(to right,#f9e39e, #c49440)", borderRadius:"20px", color:"rgb(221,145,56)"}} 
+  sx={{background:"linear-gradient(to right,#f9e39e, #c49440)", borderRadius:"20px", color:"rgb(132,83,8)"}} 
   className={classes.button}
   onClick={() => handleWithdraw(amount)}
 >
