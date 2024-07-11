@@ -13,13 +13,13 @@ const OpenPageMain = () => {
         alignItems: 'center',
         justifyContent: 'center',
         height: '100vh',
-        backgroundColor: '#1a2d69',
+        backgroundColor: '#292929',
         color: 'white',
         textAlign: 'center',
       }}
     >
       <img
-        src="/assets/2.png"
+        src="assets/images/start.png"
         alt="Main"
         style={{
           width: '100%',
@@ -33,7 +33,7 @@ const OpenPageMain = () => {
       <div style={{ marginBottom: 20 }} /> 
 
       <img
-        src="/assets/1.png"
+        src="assets/logo.png"
         alt="Logo"
         style={{
           width: 200,

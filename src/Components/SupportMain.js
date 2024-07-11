@@ -152,7 +152,7 @@ const ActivityMain = ({ children }) => {
                       elevation={3}
                       sx={{
                         p: 2,
-                        backgroundColor: "rgb(55,72,146)",
+                        background: "linear-gradient(to right,#f9e39e, #c49440)",
                         color: "white",
                         borderRadius: 3,
                       }}
