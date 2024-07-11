@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, TextField, Container, Typography, Grid, Paper} from '@mui/material';
+import { Button, TextField, Container, Typography, Grid, Paper, MenuItem } from '@mui/material';
 import { makeStyles } from '@material-ui/core';
 import axios from 'axios';
 import { domain } from '../../Components/config';
@@ -30,7 +30,9 @@ const WithdrawlLimitsMain = () => {
   const [settings, setSettings] = useState({
     id: '',
     withdrawalStartHour: '',
+    withdrawalStartPeriod: 'AM',
     withdrawalEndHour: '',
+    withdrawalEndPeriod: 'PM',
     maxWithdrawRequestsPerDay: '',
     minWithdrawAmount: '',
     maxWithdrawAmount: ''
@@ -59,27 +61,54 @@ const WithdrawlLimitsMain = () => {
         </Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
-           
-            <Grid item xs={12}>
+            <Grid item xs={6}>
               <TextField
                 name="withdrawalStartHour"
-                label="Withdrawal Start Hour ( format 24 hour )"
+                label="Withdrawal Start Hour"
                 variant="outlined"
                 fullWidth
                 value={settings.withdrawalStartHour}
                 onChange={handleChange}
               />
             </Grid>
-            <Grid item xs={12}>
-  <TextField
-    name="withdrawalEndHour"
-    label="Withdrawal End Hour ( format 24 hour )"
-    variant="outlined"
-    fullWidth
-    value={settings.withdrawalEndHour}
-    onChange={handleChange}
-  />
-</Grid>
+            <Grid item xs={6}>
+              <TextField
+                select
+                name="withdrawalStartPeriod"
+                label="Start Period"
+                variant="outlined"
+                fullWidth
+                value={settings.withdrawalStartPeriod}
+                onChange={handleChange}
+              >
+                <MenuItem value="AM">AM</MenuItem>
+                <MenuItem value="PM">PM</MenuItem>
+              </TextField>
+            </Grid>
+            <Grid item xs={6}>
+              <TextField
+                name="withdrawalEndHour"
+                label="Withdrawal End Hour"
+                variant="outlined"
+                fullWidth
+                value={settings.withdrawalEndHour}
+                onChange={handleChange}
+              />
+            </Grid>
+            <Grid item xs={6}>
+              <TextField
+                select
+                name="withdrawalEndPeriod"
+                label="End Period"
+                variant="outlined"
+                fullWidth
+                value={settings.withdrawalEndPeriod}
+                onChange={handleChange}
+              >
+                <MenuItem value="AM">AM</MenuItem>
+                <MenuItem value="PM">PM</MenuItem>
+              </TextField>
+            </Grid>
             <Grid item xs={12}>
               <TextField
                 name="maxWithdrawRequestsPerDay"
