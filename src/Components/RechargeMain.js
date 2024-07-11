@@ -189,7 +189,7 @@ const PromotionMain = ({ children }) => {
         const response = await axios.get(`${domain}/user`, {
           withCredentials: true,
         });
-        console.log("coming data is --->",response.data)
+        console.log("coming data is --->", response.data);
         setUser(response.data.user);
         setWalletAmount(response.data.user.walletAmount); // Assuming response.data contains user details including walletAmount
       } catch (err) {
@@ -207,7 +207,7 @@ const PromotionMain = ({ children }) => {
       axios
         .get(`${domain}/Getid`, { withCredentials: true })
         .then((res) => {
-          console.log("res-->",res.data)
+          console.log("res-->", res.data);
           setGet1(res.data.Upi);
           setGet2(res.data.Trx);
           setImageUrl(`${domain}${res.data.imageUrl}`);
@@ -260,7 +260,7 @@ const PromotionMain = ({ children }) => {
               container
               mt={2}
               style={{
-                backgroundImage: `url('assets/TotalAssetsBg-b1749647 (1).png')`,
+                backgroundImage: `url('assets/Gold-Plate.png')`,
                 borderRadius: 8,
                 padding: 16,
                 backgroundSize: "cover",
@@ -331,14 +331,14 @@ const PromotionMain = ({ children }) => {
                 marginRight: "auto",
               }}
             >
-              {["USDT","UPIxPAYTM", "UPI x QR"].map((mode) => (
+              {["USDT", "UPIxPAYTM", "UPI x QR"].map((mode) => (
                 <Grid item xs={4} key={mode}>
                   <div
                     style={{
                       background:
                         paymentMode === mode
-                          ? "rgb(205,160,79)"
-                          : "rgb(77,77,76)",
+                          ? "linear-gradient(to right,#f9e39e, #c49440)"
+                          : "rgb(50,50,49)",
                       borderRadius: 8,
                       color: "white",
                       padding: 16,
@@ -377,7 +377,7 @@ const PromotionMain = ({ children }) => {
                 marginLeft: "auto",
                 marginRight: "auto",
                 boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-                backgroundColor: "rgb(51,51,50)",
+                backgroundColor: "#333332",
                 borderRadius: "10px",
               }}
             >
@@ -403,8 +403,9 @@ const PromotionMain = ({ children }) => {
                       onClick={() => handleButtonClick(value)}
                       style={{
                         width: "100%",
-                        backgroundColor: "rgb(77,77,76)",
-                        color: "white",
+                        background:
+                          "linear-gradient(to right,#f9e39e, #c49440)",
+                        color: "rgb(153,95,19)",
                       }}
                     >
                       ₹{value.toLocaleString()}
@@ -420,8 +421,9 @@ const PromotionMain = ({ children }) => {
                       onClick={() => handleButtonClick(value)}
                       style={{
                         width: "100%",
-                        backgroundColor: "rgb(77,77,76)",
-                        color: "white",
+                        background:
+                          "linear-gradient(to right,#f9e39e, #c49440)",
+                        color: "rgb(153,95,19)",
                       }}
                     >
                       ₹{value.toLocaleString()}
@@ -437,9 +439,9 @@ const PromotionMain = ({ children }) => {
                     fullWidth
                     value={amount}
                     onChange={handleInputChange}
-                    style={{ marginTop: "5px", color: "rgb(77,77,76)" }}
+                    style={{ marginTop: "5px" }}
                     InputProps={{
-                      style: { color: "black" },
+                      style: { color: "white" },
                       inputProps: { "aria-label": "description" },
                     }}
                     InputLabelProps={{
@@ -453,7 +455,7 @@ const PromotionMain = ({ children }) => {
                       marginTop: "5px",
                       marginBottom: "5px",
                       borderRadius: "10px",
-                      backgroundColor: "rgb(111,115,129)",
+                      background: "linear-gradient(to right,#f9e39e, #c49440)",
                       color: "white",
                     }}
                     fullWidth
@@ -483,12 +485,12 @@ const PromotionMain = ({ children }) => {
             <Box
               sx={{
                 p: 2,
-                backgroundColor: "rgb(77,77,76)",
+                backgroundColor: "rgb(51,51,50)",
                 borderRadius: "4px",
               }}
               mt={2}
             >
-              <Typography variant="h6" gutterBottom sx={{color: "#ffffff"}}>
+              <Typography variant="h6" gutterBottom sx={{ color: "#ffffff" }}>
                 Recharge Instructions
               </Typography>
               <List>
@@ -496,25 +498,37 @@ const PromotionMain = ({ children }) => {
                   <ListItemIcon>
                     <CheckCircleIcon sx={{ color: "rgb(167,164,156)" }} />
                   </ListItemIcon>
-                  <ListItemText sx={{color: "#a7a49c"}} primary="If the transfer time is up, please fill out the deposit form again." />
+                  <ListItemText
+                    sx={{ color: "#a7a49c" }}
+                    primary="If the transfer time is up, please fill out the deposit form again."
+                  />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
                     <CheckCircleIcon sx={{ color: "#a7a49c" }} />
                   </ListItemIcon>
-                  <ListItemText sx={{color: "#a7a49c"}} primary="The transfer amount must match the order you created, otherwise the money cannot be credited successfully." />
+                  <ListItemText
+                    sx={{ color: "#a7a49c" }}
+                    primary="The transfer amount must match the order you created, otherwise the money cannot be credited successfully."
+                  />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
                     <ErrorIcon sx={{ color: "#a7a49c" }} />
                   </ListItemIcon>
-                  <ListItemText sx={{color: "#a7a49c"}} primary="If you transfer the wrong amount, our company will not be responsible for the lost amount!" />
+                  <ListItemText
+                    sx={{ color: "#a7a49c" }}
+                    primary="If you transfer the wrong amount, our company will not be responsible for the lost amount!"
+                  />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
                     <ErrorIcon sx={{ color: "#a7a49c" }} />
                   </ListItemIcon>
-                  <ListItemText sx={{color: "#a7a49c"}} primary="Note: do not cancel the deposit order after the money has been transferred." />
+                  <ListItemText
+                    sx={{ color: "#a7a49c" }}
+                    primary="Note: do not cancel the deposit order after the money has been transferred."
+                  />
                 </ListItem>
               </List>
             </Box>

@@ -655,8 +655,8 @@ const WithDrawMain = ({ children }) => {
                 </Grid>
 
                 {/* Second row */}
-                <Grid item container xs={12}>
-                  <Grid item xs={9}>
+                <Grid item container xs={12} >
+                  <Grid item xs={9} paddingLeft="10px">
                     <Typography
                       variant="body2"
                       align="left"
@@ -672,7 +672,7 @@ const WithDrawMain = ({ children }) => {
                       Withdrawable Amount Recived{" "}
                     </Typography>
                   </Grid>
-                  <Grid item xs={3}>
+                  <Grid item xs={3} paddingRight="10px">
                     <Typography variant="body2" align="right">
                       <span style={{ color: "rgb(221,145,56)" }}> ₹0</span>
                     </Typography>

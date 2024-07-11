@@ -160,7 +160,7 @@ const BetHistoryMain = ({ children }) => {
               >
                 <Paper
                   elevation={3}
-                  sx={{ borderRadius: 2, overflow: "hidden" }}
+                  sx={{ borderRadius: 2, overflow: "hidden", background: "#333332"}}
                 >
                   <Box
                     sx={{
@@ -168,12 +168,12 @@ const BetHistoryMain = ({ children }) => {
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
-                      bgcolor: "grey.100",
+                      bgcolor: "rgb(63,63,63)",
                     }}
                   >
                     <Typography
                       variant="h6"
-                      sx={{ fontWeight: "bold", color: "text.primary" }}
+                      sx={{ fontWeight: "bold", color: "white" }}
                     >
                       Lottery Result : {data.result}
                     </Typography>
@@ -198,7 +198,7 @@ const BetHistoryMain = ({ children }) => {
                               borderBottom: "none",
                               pl: 3,
                               py: 1.5,
-                              color: "text.secondary",
+                              color: "white",
                             }}
                           >
                             Type
@@ -208,7 +208,7 @@ const BetHistoryMain = ({ children }) => {
                               borderBottom: "none",
                               pr: 3,
                               py: 1.5,
-                              color: "text.primary",
+                              color: "#9195a3",
                             }}
                             align="right"
                           >
@@ -221,7 +221,7 @@ const BetHistoryMain = ({ children }) => {
                               borderBottom: "none",
                               pl: 3,
                               py: 1.5,
-                              color: "text.secondary",
+                              color: "white",
                             }}
                           >
                             Period
@@ -231,7 +231,7 @@ const BetHistoryMain = ({ children }) => {
                               borderBottom: "none",
                               pr: 3,
                               py: 1.5,
-                              color: "text.primary",
+                              color: "#9195a3",
                             }}
                             align="right"
                           >
@@ -244,7 +244,7 @@ const BetHistoryMain = ({ children }) => {
                               borderBottom: "none",
                               pl: 3,
                               py: 1.5,
-                              color: "text.secondary",
+                              color: "white",
                             }}
                           >
                             Tax Deducted{" "}
@@ -254,7 +254,7 @@ const BetHistoryMain = ({ children }) => {
                               borderBottom: "none",
                               pr: 3,
                               py: 1.5,
-                              color: "text.primary",
+                              color: "#9195a3",
                               wordBreak: "break-all",
                             }}
                             align="right"
@@ -268,7 +268,7 @@ const BetHistoryMain = ({ children }) => {
                               borderBottom: "none",
                               pl: 3,
                               py: 1.5,
-                              color: "text.secondary",
+                              color: "white",
                             }}
                           >
                             Select
@@ -278,7 +278,7 @@ const BetHistoryMain = ({ children }) => {
                               borderBottom: "none",
                               pr: 3,
                               py: 1.5,
-                              color: "text.primary",
+                              color: "#9195a3",
                             }}
                             align="right"
                           >
@@ -287,7 +287,7 @@ const BetHistoryMain = ({ children }) => {
                         </TableRow>
                         <TableRow>
                           <TableCell
-                            sx={{ pl: 3, py: 1.5, color: "text.secondary" }}
+                            sx={{ pl: 3, py: 1.5, color: "white" }}
                           >
                             Total bet
                           </TableCell>
@@ -302,8 +302,8 @@ const BetHistoryMain = ({ children }) => {
                   <Box
                     sx={{
                       p: 2,
-                      bgcolor: "grey.200",
-                      color: "text.secondary",
+                      bgcolor: "rgb(63,63,63)",
+                      color: "white",
                       fontSize: "0.875rem",
                     }}
                   >

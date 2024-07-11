@@ -75,7 +75,7 @@ useEffect(() => {
                                 border: 'none',
                                 fontSize: '1em',
                                 marginBottom: "120px",
-                                color: '#8f5205'
+                                color: '#995f12'
 
                             }}>
                             Attendance
