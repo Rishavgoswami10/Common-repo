@@ -50,9 +50,9 @@ const MessagesMain = ({ children }) => {
           flexDirection="column"
           height="calc(var(--vh, 1vh) * 100)"
           position="relative"
-          sx={{ bgcolor: '#f4f6f8' }}
+          sx={{ bgcolor: '#242424' }}
         >
-          <AppBar position="sticky" sx={{ bgcolor: 'rgb(42,50,112)' }}>
+          <AppBar position="sticky" sx={{ bgcolor: 'rgb(51,51,50)' }}>
             <Toolbar>
               <Grid container alignItems="center" justifyContent="space-between">
                 <Grid item xs={6} textAlign="left">

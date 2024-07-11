@@ -75,7 +75,7 @@ const ActivityMain = ({ children }) => {
           height="calc(var(--vh, 1vh) * 100)"
           position="relative"
         >
-          <Box flexGrow={1} sx={{ backgroundColor: 'rgb(34,39,91)' }}>
+          <Box flexGrow={1} sx={{ backgroundColor: 'rgb(36,36,36)' }}>
             <Grid
               container
               alignItems="center"
@@ -84,7 +84,7 @@ const ActivityMain = ({ children }) => {
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: 'Rgb(55,72,146)',
+                backgroundColor: 'rgb(63,63,63)',
                 padding: '8px 16px',
                 color: 'white'
               }}
@@ -146,7 +146,7 @@ const ActivityMain = ({ children }) => {
                     style: { color: 'white' },
                   }}
                 />
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" sx={{background: "linear-gradient(to right,#f9e39e, #c49440)", color: "rgb(143,82,5)"}}>
                   Send Ticket
                 </Button>
               </form>

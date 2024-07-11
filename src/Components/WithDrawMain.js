@@ -368,8 +368,8 @@ useEffect(() => {
     alignItems="center"
     justifyContent="space-between"
     sx={{
-      bgcolor: 'rgb(54,72,146)',
-      border: '1px solid rgb(54,72,146)',
+      background: 'linear-gradient(to right,#f9e39e, #c49440)',
+      border: '1px solid rgb(158,82,6)',
       borderRadius: '4px',
       padding: '16px',
       width: '350px',
@@ -387,11 +387,11 @@ useEffect(() => {
         height={30}
         sx={{ mb: 2 }}
       />
-      <Typography variant="h6" sx={{fontSize:"13px",color:"#a7a5a1"}}>{bankDetails.bankName}</Typography>
+      <Typography variant="h6" sx={{fontSize:"13px",color:"rgb(158,82,6)"}}>{bankDetails.bankName}</Typography>
     </Box>
     <Divider orientation="vertical" flexItem sx={{height: '70px', marginLeft: '0'}} /> 
     <Box display="flex" alignItems="center">
-      <Typography variant="body1" sx={{color:"#a7a5a1"}}>{bankDetails.accountNo}</Typography>
+      <Typography variant="body1" sx={{color:"rgb(158,82,6)"}}>{bankDetails.accountNo}</Typography>
       <IconButton>
         <ArrowForwardIosIcon />
       </IconButton>

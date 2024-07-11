@@ -79,7 +79,7 @@ const TransactionHistoryMain = ({ children }) => {
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000,
-                backgroundColor: 'rgb(42,50,112)',
+                backgroundColor: 'rgb(63,63,63)',
                 padding: '8px 16px',
                 color: 'white'
                 
@@ -108,14 +108,15 @@ const TransactionHistoryMain = ({ children }) => {
     style={{ width: '100%', fontSize: '20px', padding: '10px', backgroundColor: 'transparent', color: 'white', border: '1px solid white' }}
   >
 
-    <option value="all">All</option>
-    <option value="deposit">Deposit</option>
-    <option value="withdrawal">Withdrawal</option>
-    <option value="commission">Agent Commission</option>
-    <option value="Bet">Bet</option>
-    <option value="Envelop">Envelop</option>
-    <option value="DepositBonus">Deposit bonus</option>
-    <option value="Salary">Salary</option>
+<option value="all" style={{ color: 'black' }}>All</option>
+<option value="deposit" style={{ color: 'black' }}>Deposit</option>
+<option value="withdrawal" style={{ color: 'black' }}>Withdrawal</option>
+<option value="commission" style={{ color: 'black' }}>Agent Commission</option>
+<option value="Bet" style={{ color: 'black' }}>Bet</option>
+<option value="Envelop" style={{ color: 'black' }}>Envelop</option>
+<option value="DepositBonus" style={{ color: 'black' }}>Deposit bonus</option>
+<option value="Salary" style={{ color: 'black' }}>Salary</option>
+
   </select>
 </div>
 
