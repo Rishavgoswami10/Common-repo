@@ -305,6 +305,7 @@ useEffect(() => {
         borderRadius: 8,
         padding: 16,
         backgroundSize: 'cover',
+        backgroundImage: `url('assets/TotalAssetsBg-b1749647 (1).png')`,
         width: '97%',
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -316,7 +317,7 @@ useEffect(() => {
           <img src="assets/images/download (16).png" alt="Your Image" style={{ maxWidth: '30%' }} />
         </Grid>
         <Grid item xs={9}>
-          <Typography fontSize="20px" sx={{color:"#8f5205"}} align="left">Avilable Balance</Typography>
+          <Typography fontSize="20px" sx={{color:"#8f5205"}} align="left">Available Balance</Typography>
         </Grid>
       </Grid>
       <Grid container item alignItems="center">

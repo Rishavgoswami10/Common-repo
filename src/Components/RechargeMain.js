@@ -260,7 +260,7 @@ const PromotionMain = ({ children }) => {
               container
               mt={2}
               style={{
-                backgroundImage: `url('assets/3.png')`,
+                backgroundImage: `url('assets/TotalAssetsBg-b1749647 (1).png')`,
                 borderRadius: 8,
                 padding: 16,
                 backgroundSize: "cover",
@@ -377,7 +377,7 @@ const PromotionMain = ({ children }) => {
                 marginLeft: "auto",
                 marginRight: "auto",
                 boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-                backgroundColor: "rgb(205,160,79)",
+                backgroundColor: "rgb(51,51,50)",
                 borderRadius: "10px",
               }}
             >
@@ -439,7 +439,7 @@ const PromotionMain = ({ children }) => {
                     onChange={handleInputChange}
                     style={{ marginTop: "5px", color: "rgb(77,77,76)" }}
                     InputProps={{
-                      style: { color: "rgb(77,77,76)" },
+                      style: { color: "black" },
                       inputProps: { "aria-label": "description" },
                     }}
                     InputLabelProps={{
@@ -453,7 +453,7 @@ const PromotionMain = ({ children }) => {
                       marginTop: "5px",
                       marginBottom: "5px",
                       borderRadius: "10px",
-                      backgroundColor: "rgb(235,206,132)",
+                      backgroundColor: "rgb(111,115,129)",
                       color: "white",
                     }}
                     fullWidth

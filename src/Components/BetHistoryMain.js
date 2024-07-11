@@ -3,10 +3,9 @@ import Mobile from "../Components/Mobile";
 import IconButton from "@mui/material/IconButton";
 import SmsIcon from "@mui/icons-material/Sms";
 import DownloadIcon from "@mui/icons-material/Download";
-import { Grid} from "@mui/material";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import {
+  Grid,
+  Box,
   Typography,
   Paper,
   Table,
@@ -14,32 +13,35 @@ import {
   TableCell,
   TableContainer,
   TableRow,
-  Box,
-  Chip
+  Chip,
 } from "@mui/material";
-import {domain} from './config'
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { domain } from "./config";
 
 const BetHistoryMain = ({ children }) => {
   const [apiData, setBets] = useState([]);
   const [gameType, setGameType] = useState("all");
   const [selectedDate, setSelectedDate] = useState(null);
 
-  console.log(apiData);
   useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await axios.get(
-          `${domain}/user/betshistory/`,
-          { withCredentials: true }
-        );
-        setBets(response.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+    fetchUserData(gameType);
+  }, [gameType]);
 
-    fetchUserData();
-  }, []);
+  const fetchUserData = async (gameType) => {
+    try {
+      let url = `${domain}/user/betshistory`;
+      if (gameType === "game1") url = `${domain}/user/betshistory`;
+      if (gameType === "game2") url = `${domain}/user/K3history`;
+      if (gameType === "game3") url = `${domain}/user/trxbethistory`;
+      // Add more game types and corresponding URLs as needed
+
+      const response = await axios.get(url, { withCredentials: true });
+      setBets(response.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   const navigate = useNavigate();
 
@@ -49,7 +51,8 @@ const BetHistoryMain = ({ children }) => {
     }
     if (
       selectedDate &&
-      new Date(data.timestamp).toDateString() !== selectedDate.toDateString()
+      new Date(data.timestamp).toDateString() !==
+        new Date(selectedDate).toDateString()
     ) {
       return false;
     }
@@ -97,51 +100,58 @@ const BetHistoryMain = ({ children }) => {
 
             {/* Add Filters */}
             <Grid container spacing={2} mt={2}>
-  <Grid item xs={12} sm={12}>
-    <Box width="100%" px={0.5}>
-      <div class="form-control full-width">
-        <select 
-          id="game-type" 
-          onchange="setGameType(this.value)" 
-          style={{
-            width: '95%', 
-            backgroundColor: 'transparent', 
-            color: 'white', 
-            border: '1px solid white', 
-            fontSize: '1.2em', 
-            padding: '10px'
-          }}
-        >
-          <option value="all" style={{ color: 'black' }}>All</option>
-<option value="game1" style={{ color: 'black' }}>Wingo</option>
-<option value="game2" style={{ color: 'black' }}>K3</option>
-<option value="game2" style={{ color: 'black' }}>TRX</option>
-<option value="game2" style={{ color: 'black' }}>5d</option>
-
-
-        </select>
-      </div>
-    </Box>
-  </Grid>
-  <Grid item xs={12} sm={12}>
-    <input
-      type="date"
-      value={selectedDate}
-      onChange={(event) => {
-        setSelectedDate(event.target.value);
-      }}
-      style={{
-        width: '87%', 
-        backgroundColor: 'transparent', 
-        color: 'white', 
-        border: '1px solid white', 
-        fontSize: '1.2em', 
-        padding: '10px'
-      }}
-    />
-  </Grid>
-</Grid>
-           
+              <Grid item xs={12} sm={12}>
+                <Box width="100%" px={0.5}>
+                  <div className="form-control full-width">
+                    <select
+                      id="game-type"
+                      onChange={(e) => setGameType(e.target.value)}
+                      style={{
+                        width: "95%",
+                        backgroundColor: "transparent",
+                        color: "white",
+                        border: "1px solid white",
+                        fontSize: "1.2em",
+                        padding: "10px",
+                      }}
+                    >
+                      <option value="all" style={{ color: "black" }}>
+                        All
+                      </option>
+                      <option value="game1" style={{ color: "black" }}>
+                        Wingo
+                      </option>
+                      <option value="game2" style={{ color: "black" }}>
+                        K3
+                      </option>
+                      <option value="game3" style={{ color: "black" }}>
+                        TRX
+                      </option>
+                      <option value="game4" style={{ color: "black" }}>
+                        5D
+                      </option>
+                    </select>
+                  </div>
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12}>
+                <input
+                  type="date"
+                  value={selectedDate}
+                  onChange={(event) => {
+                    setSelectedDate(event.target.value);
+                  }}
+                  style={{
+                    width: "87%",
+                    backgroundColor: "transparent",
+                    color: "white",
+                    border: "1px solid white",
+                    fontSize: "1.2em",
+                    padding: "10px",
+                  }}
+                />
+              </Grid>
+            </Grid>
 
             {filteredData.map((data, index) => (
               <Box
